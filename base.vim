@@ -27,12 +27,10 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'leafgarland/typescript-vim'
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'chemzqm/wxapp.vim'
 Plug 'fatih/vim-go'
 Plug 'vim-python/python-syntax'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'ryanoasis/vim-devicons'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tomtom/tcomment_vim'
 Plug 'airblade/vim-gitgutter'
@@ -41,15 +39,15 @@ Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-bufferline'
 Plug 'tell-k/vim-autopep8'
 Plug 'valloric/youcompleteme'
-Plug 'joshdick/onedark.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
+Plug 'mhinz/vim-startify'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 autocmd BufEnter * :syntax sync fromstart
 autocmd FileType python set equalprg=autopep8\ -
-au VimEnter * NERDTree
 let g:ctrlp_by_filename = 1
 let g:mta_filetypes = {
 			\ 'html' : 1,
@@ -59,6 +57,7 @@ let g:mta_filetypes = {
 			\ 'jinja' : 1,
 			\ 'javascript.jsx': 1
 			\}
+let g:NERDTreeWinPos = "right"
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -67,19 +66,9 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:Webdevicons_enable_airline_tabline = 1
-let g:Webdevicons_enable_airline_statusline = 1
-let g:Webdevicons_enable_ctrlp = 1
-let g:WebDevIconsUnicodeDecorateFileNodes = 1
-let g:Webdevicons_conceal_nerdtree_brackets = 0
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:DevIconsEnableFolderPatternMatching = 1
-let g:DevIconsEnableFolderExtensionPatternMatching = 1
 filetype plugin indent on
 syntax on
-" colorscheme onedark
+set nobackup
 set nocompatible
 set laststatus=2
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
