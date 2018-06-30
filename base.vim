@@ -40,7 +40,6 @@ Plug 'bling/vim-bufferline'
 Plug 'tell-k/vim-autopep8'
 Plug 'valloric/youcompleteme'
 Plug 'terryma/vim-expand-region'
-Plug 'yuttie/comfortable-motion.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
 Plug 'mhinz/vim-startify'
@@ -72,7 +71,6 @@ set nobackup
 set nocompatible
 set laststatus=2
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
-set number
 set backspace=indent,eol,start
 set completeopt=menu
 set autoindent
