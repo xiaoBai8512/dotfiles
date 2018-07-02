@@ -78,6 +78,7 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set autowrite
+set number
 inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
