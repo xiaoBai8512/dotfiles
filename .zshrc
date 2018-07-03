@@ -1,5 +1,6 @@
 export TERM="xterm-256color"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-fontconfig'
 source "/usr/local/opt/nvm/nvm.sh"
 export LANG=en_US.UTF-8
 export PUB_HOSTED_URL=https://pub.flutter-io.cn

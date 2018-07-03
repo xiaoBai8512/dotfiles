@@ -49,11 +49,12 @@ Plug 'shougo/vimfiler.vim'
 Plug 'shougo/unite.vim'
 call plug#end()
 call vimfiler#custom#profile('default', 'context', {
+			\ 'auto_cd' : 1,
+			\ 'auto_expand' : 1,
+			\ 'toggle' : 1,
 			\ 'explorer' : 1,
 			\ 'winwidth' : 30,
 			\ 'winminwidth' : 30,
-			\ 'toggle' : 1,
-			\ 'auto_expand': 1,
 			\ 'direction' : 'rightbelow',
 			\ 'explorer_columns' : '',
 			\ 'parent': 0,
@@ -96,7 +97,6 @@ let g:vimfiler_tree_indentation = 1
 let g:vimfiler_tree_leaf_icon = ''
 let g:vimfiler_tree_opened_icon = '▼'
 let g:vimfiler_tree_closed_icon = '▷'
-let g:vimfiler_file_icon = ''
 let g:vimfiler_readonly_file_icon = '*'
 let g:vimfiler_marked_file_icon = '√'
 let g:vimfiler_direction = 'rightbelow'
