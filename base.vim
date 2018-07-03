@@ -68,6 +68,8 @@ autocmd BufEnter * :syntax sync fromstart
 autocmd FileType python set equalprg=autopep8\ -
 autocmd User Startified VimFiler
 autocmd FileType vimfiler call s:vimfilerinit()
+autocmd BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
+			\ q | endif
 function! s:vimfilerinit()
 	setl nonumber
 	setl norelativenumber
@@ -121,3 +123,4 @@ colorscheme onedark
 inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
+nnoremap <F5> :VimFiler<CR>
