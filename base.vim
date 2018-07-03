@@ -11,6 +11,7 @@ Plug 'ternjs/tern_for_vim'
 Plug 'prettier/vim-prettier'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'Valloric/MatchTagAlways'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
@@ -41,13 +42,15 @@ Plug 'tell-k/vim-autopep8'
 Plug 'valloric/youcompleteme'
 Plug 'terryma/vim-expand-region'
 Plug 'haya14busa/incsearch.vim'
-Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
+Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/vim-plug-plugins/gocode/vim/symlink.sh'  }
 Plug 'mhinz/vim-startify'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'flazz/vim-colorschemes'
+Plug 'andrewradev/splitjoin.vim'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
 call plug#end()
 autocmd BufEnter * :syntax sync fromstart
 autocmd FileType python set equalprg=autopep8\ -
-let g:ctrlp_by_filename = 1
 let g:mta_filetypes = {
 			\ 'html' : 1,
 			\ 'wxml': 1,
@@ -57,6 +60,7 @@ let g:mta_filetypes = {
 			\ 'javascript.jsx': 1
 			\}
 let g:NERDTreeWinPos = "right"
+let g:NERDTreeAutoCenter = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -67,6 +71,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 filetype plugin indent on
 syntax on
+syntax enable
 set nobackup
 set nocompatible
 set laststatus=2
@@ -79,6 +84,11 @@ set tabstop=2
 set softtabstop=2
 set autowrite
 set number
+set t_Co=256
+set background=dark
+set hidden
+colorscheme onedark
 inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
+nnoremap <silent> <F5> :NERDTreeToggle<CR>
