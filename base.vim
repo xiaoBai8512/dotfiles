@@ -47,6 +47,7 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'shougo/vimfiler.vim'
 Plug 'shougo/unite.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
 call vimfiler#custom#profile('default', 'context', {
 			\ 'auto_cd' : 1,
