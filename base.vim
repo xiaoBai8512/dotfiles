@@ -2,9 +2,6 @@ set encoding=UTF-8
 filetype off
 set rtp+=/usr/local/lib/python3.6/site-packages/powerline/bindings/vim/
 call plug#begin('~/.vim/vim-plug-plugins')
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'posva/vim-vue'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ternjs/tern_for_vim'
@@ -48,9 +45,33 @@ Plug 'flazz/vim-colorschemes'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+Plug 'shougo/vimfiler.vim'
+Plug 'shougo/unite.vim'
 call plug#end()
+call vimfiler#custom#profile('default', 'context', {
+			\ 'explorer' : 1,
+			\ 'winwidth' : 30,
+			\ 'winminwidth' : 30,
+			\ 'toggle' : 1,
+			\ 'auto_expand': 1,
+			\ 'direction' : 'rightbelow',
+			\ 'explorer_columns' : '',
+			\ 'parent': 0,
+			\ 'status' : 1,
+			\ 'safe' : 0,
+			\ 'split' : 1,
+			\ 'hidden': 1,
+			\ 'no_quit' : 1,
+			\ 'force_hide' : 0,
+			\ })
 autocmd BufEnter * :syntax sync fromstart
 autocmd FileType python set equalprg=autopep8\ -
+autocmd User Startified VimFiler
+autocmd FileType vimfiler call s:vimfilerinit()
+function! s:vimfilerinit()
+	setl nonumber
+	setl norelativenumber
+endf
 let g:mta_filetypes = {
 			\ 'html' : 1,
 			\ 'wxml': 1,
@@ -59,8 +80,6 @@ let g:mta_filetypes = {
 			\ 'jinja' : 1,
 			\ 'javascript.jsx': 1
 			\}
-let g:NERDTreeWinPos = "right"
-let g:NERDTreeAutoCenter = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -69,9 +88,20 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_restore_alternate_file = 1
+let g:vimfiler_tree_indentation = 1
+let g:vimfiler_tree_leaf_icon = ''
+let g:vimfiler_tree_opened_icon = '▼'
+let g:vimfiler_tree_closed_icon = '▷'
+let g:vimfiler_file_icon = ''
+let g:vimfiler_readonly_file_icon = '*'
+let g:vimfiler_marked_file_icon = '√'
+let g:vimfiler_direction = 'rightbelow'
 filetype plugin indent on
 syntax on
 syntax enable
+set hlsearch
 set nobackup
 set nocompatible
 set laststatus=2
@@ -91,4 +121,3 @@ colorscheme onedark
 inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
-nnoremap <silent> <F5> :NERDTreeToggle<CR>
