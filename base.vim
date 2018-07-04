@@ -104,6 +104,7 @@ let g:vimfiler_direction = 'rightbelow'
 filetype plugin indent on
 syntax on
 syntax enable
+set cursorline
 set hlsearch
 set nobackup
 set nocompatible

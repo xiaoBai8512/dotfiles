@@ -16,6 +16,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/
 export ZSH=/Users/shikun/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if [[ -r /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
 	source /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
