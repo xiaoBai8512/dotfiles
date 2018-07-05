@@ -53,6 +53,7 @@ Plug 'shougo/vimfiler.vim'
 Plug 'shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'lfv89/vim-interestingwords'
+Plug 'majutsushi/tagbar'
 call plug#end()
 call vimfiler#custom#profile('default', 'context', {
 			\ 'auto_cd' : 1,
@@ -77,6 +78,7 @@ autocmd User Startified VimFiler
 autocmd FileType vimfiler call s:vimfilerinit()
 autocmd BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
 			\ q | endif
+autocmd VimEnter * nested :call tagbar#autoopen(1)
 function! s:vimfilerinit()
 	setl nonumber
 	setl norelativenumber
@@ -87,7 +89,8 @@ let g:mta_filetypes = {
 			\ 'xhtml' : 1,
 			\ 'xml' : 1,
 			\ 'jinja' : 1,
-			\ 'javascript.jsx': 1
+			\ 'javascript.jsx': 1,
+			\ 'vue': 1,
 			\}
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -107,6 +110,8 @@ let g:vimfiler_tree_closed_icon = '▷'
 let g:vimfiler_readonly_file_icon = '*'
 let g:vimfiler_marked_file_icon = '√'
 let g:vimfiler_direction = 'rightbelow'
+let g:tagbar_left = 1
+let g:tagbar_compact = 1
 filetype plugin indent on
 syntax on
 syntax enable
@@ -139,3 +144,5 @@ inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
 nnoremap <F5> :VimFiler<CR>
+nmap <F8> :TagbarToggle<CR>
+nnoremap <leader>% :MtaJumpToOtherTag<CR>
