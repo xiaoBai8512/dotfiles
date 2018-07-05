@@ -1,6 +1,9 @@
+if has('python3')
+	silent! python3 1
+endif
+set laststatus=2
 set encoding=UTF-8
 filetype off
-set rtp+=/usr/local/lib/python3.6/site-packages/powerline/bindings/vim/
 call plug#begin('~/.vim/vim-plug-plugins')
 Plug 'posva/vim-vue'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -16,6 +19,7 @@ Plug 'epilande/vim-react-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
+Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
 Plug 'raimondi/delimitmate'
@@ -36,7 +40,6 @@ Plug 'godlygeek/tabular'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-bufferline'
 Plug 'tell-k/vim-autopep8'
-Plug 'valloric/youcompleteme'
 Plug 'terryma/vim-expand-region'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/vim-plug-plugins/gocode/vim/symlink.sh'  }
@@ -86,6 +89,7 @@ let g:mta_filetypes = {
 			\}
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_path_to_python_interpreter = "/usr/local/bin/python"
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
@@ -104,7 +108,8 @@ let g:vimfiler_direction = 'rightbelow'
 filetype plugin indent on
 syntax on
 syntax enable
-set cursorline
+set mouse=a
+set ruler
 set hlsearch
 set nobackup
 set nocompatible
@@ -121,6 +126,10 @@ set number
 set t_Co=256
 set background=dark
 set hidden
+set cursorline
+set guifont=SauceCodePro\ Nerd\ Font:h12
+set guioptions=a
+hi NonText guifg=bg
 colorscheme onedark
 inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
