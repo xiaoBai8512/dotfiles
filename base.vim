@@ -45,12 +45,14 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/vim-plug-plugins/gocode/vim/symlink.sh'  }
 Plug 'mhinz/vim-startify'
 Plug 'flazz/vim-colorschemes'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'shougo/vimfiler.vim'
 Plug 'shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'lfv89/vim-interestingwords'
 call plug#end()
 call vimfiler#custom#profile('default', 'context', {
 			\ 'auto_cd' : 1,
@@ -124,12 +126,14 @@ set softtabstop=2
 set autowrite
 set number
 set t_Co=256
+set termguicolors
 set background=dark
 set hidden
-set cursorline
+set nocursorline
 set guifont=SauceCodePro\ Nerd\ Font:h12
 set guioptions=a
 hi NonText guifg=bg
+hi Comment cterm=italic
 colorscheme onedark
 inoremap <C-l> <Esc>o
 inoremap <C-e> <Esc>A
