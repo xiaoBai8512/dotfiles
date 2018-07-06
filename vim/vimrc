@@ -1,0 +1,4 @@
+so ~/dotfiles/vim/init
+so ~/dotfiles/vim/plugins
+so ~/dotfiles/vim/configs
+so ~/dotfiles/vim/autocmd

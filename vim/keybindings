@@ -1,0 +1,6 @@
+inoremap <C-l> <Esc>o
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+nnoremap <F5> :VimFiler<CR>
+nmap <F8> :TagbarToggle<CR>
+nnoremap <leader>% :MtaJumpToOtherTag<CR>

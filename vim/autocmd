@@ -1,0 +1,11 @@
+autocmd BufEnter * :syntax sync fromstart
+autocmd FileType python set equalprg=autopep8\ -
+autocmd User Startified VimFiler
+autocmd FileType vimfiler call s:vimfilerinit()
+autocmd BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
+			\ q | endif
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+function! s:vimfilerinit()
+	setl nonumber
+	setl norelativenumber
+endf
