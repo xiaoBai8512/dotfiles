@@ -1,5 +1,5 @@
-so ~/dotfiles/vim/init
-so ~/dotfiles/vim/plugins
-so ~/dotfiles/vim/configs
-so ~/dotfiles/vim/autocmd
-so ~/dotfiles/vim/keybindings
+so ~/dotfiles/vim/init.vim
+so ~/dotfiles/vim/plugins.vim
+so ~/dotfiles/vim/configs.vim
+so ~/dotfiles/vim/autocmd.vim
+so ~/dotfiles/vim/keybindings.vim

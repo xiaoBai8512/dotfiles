@@ -17,4 +17,7 @@ nnoremap <F5> :VimFiler<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Normal mode jump to match tag
-nnoremap <leader>% :MtaJumpToOtherTag<CR>
+nnoremap <Leader>% :MtaJumpToOtherTag<CR>
+
+" Normal mode source my vimrc file
+nnoremap <Leader>so :so ~/.vimrc<CR>
