@@ -46718,7 +46718,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>330 269 1161 361 0 0 1440 878 </string>
+	<string>279 268 1161 378 0 0 1440 900 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 578 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -46726,9 +46726,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 342 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>170 281 937 512 0 0 1440 878 </string>
+	<string>361 380 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 496 570 377 0 0 1440 878 </string>
+	<string>0 0 1440 900 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 71 650 402 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_806E3D77-D269-49C0-87D7-D3467D6F141D</key>
@@ -47305,7 +47305,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>DejaVuSansMonoNerdFontComplete-Book 12</string>
+			<string>SauceCodeProNerdFontComplete-Medium 12</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -47479,7 +47479,7 @@
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
-	<true/>
+	<false/>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WordCharacters</key>

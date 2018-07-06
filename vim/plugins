@@ -49,4 +49,5 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'lfv89/vim-interestingwords'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sensible'
+Plug 'mileszs/ack.vim'
 call plug#end()
