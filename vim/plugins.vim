@@ -2,7 +2,7 @@ call plug#begin('~/.vim/vim-plug-plugins')
 Plug 'posva/vim-vue'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ternjs/tern_for_vim'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -50,4 +50,5 @@ Plug 'lfv89/vim-interestingwords'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sensible'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-repeat'
 call plug#end()

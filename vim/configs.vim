@@ -50,7 +50,7 @@ call vimfiler#custom#profile('default', 'context', {
 			\ 'winwidth' : 30,
 			\ 'winminwidth' : 30,
 			\ 'direction' : 'rightbelow',
-			\ 'explorer_columns' : '',
+			\ 'explorer_columns' : 'filetypeicon:gitstatus',
 			\ 'parent': 0,
 			\ 'status' : 1,
 			\ 'safe' : 0,

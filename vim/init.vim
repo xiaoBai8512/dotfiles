@@ -2,5 +2,6 @@
 if has('python3')
 	silent! python3 1
 endif
+let mapleader = ','
 set encoding=UTF-8
 filetype off
