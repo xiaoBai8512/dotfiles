@@ -88,6 +88,7 @@ set tabstop=2
 set softtabstop=2
 set autowrite
 set number
+set relativenumber
 set hidden
 set nocursorline
 set noerrorbells
