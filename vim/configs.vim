@@ -8,6 +8,7 @@ set guioptions=ai
 set laststatus=2
 set t_Co=256
 set termguicolors
+set cursorline
 syntax enable
 syntax on
 
@@ -84,7 +85,6 @@ set laststatus=2
 set mouse=a
 set nobackup
 set nocompatible
-set nocursorline
 set noerrorbells
 set number
 set relativenumber
