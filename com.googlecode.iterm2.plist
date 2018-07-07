@@ -46726,7 +46726,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 342 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>361 380 796 473 0 0 1440 878 </string>
+	<string>361 380 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1440 900 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -47405,6 +47405,8 @@
 	</array>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
 	<key>PointerActions</key>
@@ -47442,6 +47444,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/shikun/dotfiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUAutomaticallyUpdate</key>
@@ -47455,7 +47459,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-05T13:45:31Z</date>
+	<date>2018-07-06T16:04:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

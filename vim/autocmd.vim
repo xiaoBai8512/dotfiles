@@ -29,4 +29,4 @@ au BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==
 			\ q | endif
 
 " Open TagBar if filetype supported when VimEnter
-au BufEnter * nested :call tagbar#autoopen(1)
+au FileType * nested :call tagbar#autoopen(0)
