@@ -1,9 +1,9 @@
 call plug#begin('~/.vim/vim-plug-plugins')
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/MatchTagAlways'
-Plug 'Valloric/YouCompleteMe'
-Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'shougo/vimproc.vim', {'do' : 'make'}
+Plug 'sirVer/ultisnips'
+Plug 'valloric/MatchTagAlways'
+Plug 'valloric/YouCompleteMe'
+Plug 'vimjas/vim-python-pep8-indent'
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'bling/vim-bufferline'

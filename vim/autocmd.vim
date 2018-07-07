@@ -5,12 +5,16 @@ autocmd BufEnter * :syntax sync fromstart
 autocmd FileType python set equalprg=autopep8\ -
 
 " UserEvent provided by Startify for loading Vimfiler after Startify opened
-autocmd User Startified VimFiler
+autocmd User Startified call s:StartifiedOpened()
+function! s:StartifiedOpened() abort
+	Tagbar
+	VimFiler
+endf
 
 " Vimfiler Init
-autocmd FileType vimfiler call s:vimfilerinit()
+autocmd FileType vimfiler call s:VimfilerInit()
 
-function! s:vimfilerinit()
+function! s:VimfilerInit() abort
 	setl nonumber
 	setl norelativenumber
 endf

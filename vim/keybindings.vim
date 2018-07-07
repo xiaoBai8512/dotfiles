@@ -1,12 +1,6 @@
 " Insert mode quick open new line
 inoremap <C-l> <Esc>o
 
-" Insert mode quick jump to lineend
-inoremap <C-e> <Esc>A
-
-" Insert mode quick jump to linestart
-inoremap <C-a> <Esc>I
-
 " Normal mode show a prompt for ack search for code
 nnoremap <F4> :Ack!<Space>
 
@@ -23,11 +17,11 @@ nnoremap <Leader>% :MtaJumpToOtherTag<CR>
 nnoremap <Leader>so :so ~/.vimrc<CR>
 
 " Normal mode open my vimrc files
-nnoremap <Leader>osc :e ~/dotfiles/vim/configs.vim<CR>
-nnoremap <Leader>osp :e ~/dotfiles/vim/plugins.vim<CR>
-nnoremap <Leader>osk :e ~/dotfiles/vim/keybindings.vim<CR>
-nnoremap <Leader>osi :e ~/dotfiles/vim/init.vim<CR>
 nnoremap <Leader>osa :e ~/dotfiles/vim/autocmd.vim<CR>
+nnoremap <Leader>osc :e ~/dotfiles/vim/configs.vim<CR>
+nnoremap <Leader>osi :e ~/dotfiles/vim/init.vim<CR>
+nnoremap <Leader>osk :e ~/dotfiles/vim/keybindings.vim<CR>
+nnoremap <Leader>osp :e ~/dotfiles/vim/plugins.vim<CR>
 
 " Normal mode install plugin via vim-plug
 nnoremap <Leader>ip :PlugInstall<CR>

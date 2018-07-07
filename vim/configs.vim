@@ -8,7 +8,7 @@ set guioptions=ai
 set laststatus=2
 set t_Co=256
 set termguicolors
-set cursorline
+set nocursorline
 syntax enable
 syntax on
 
@@ -87,10 +87,12 @@ set nobackup
 set nocompatible
 set noerrorbells
 set number
-set relativenumber
+set norelativenumber
 set ruler
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set vb t_vb=
+set textwidth=100
+set colorcolumn=+1
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
