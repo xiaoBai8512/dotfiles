@@ -74,6 +74,13 @@ let g:vimfiler_tree_opened_icon = '▼'
 let g:tagbar_compact = 1
 let g:tagbar_left = 1
 
+" ALE
+let g:ale_fixers = {'js': ['eslint --fix']}
+let g:ale_fix_on_save = 1
+
+" Jsx
+let g:jsx_ext_required = 0
+
 "" Vim settings
 filetype plugin indent on
 set autoindent

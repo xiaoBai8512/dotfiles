@@ -1,27 +1,32 @@
 " Sync theme from BufferEnter to fix highlighting issues
-autocmd BufEnter * :syntax sync fromstart
+au BufEnter * :syntax sync fromstart
 
 " If filetype = python set = to autopep8 to format python code
-autocmd FileType python set equalprg=autopep8\ -
+au FileType python set equalprg=autopep8\ -
 
-" UserEvent provided by Startify for loading Vimfiler after Startify opened
-autocmd User Startified call s:StartifiedOpened()
-function! s:StartifiedOpened() abort
+" Welcome page using VimEnter event and via augroup
+augroup Welcome
+	au!
+	au VimEnter * call s:OpenTagbarAndVimFilerWhenStarted()
+augroup end
+
+function! s:OpenTagbarAndVimFilerWhenStarted() abort
 	Tagbar
 	VimFiler
+	wincmd p
 endf
 
 " Vimfiler Init
-autocmd FileType vimfiler call s:VimfilerInit()
+au FileType vimfiler call s:VimfilerInit()
 
 function! s:VimfilerInit() abort
 	setl nonumber
 	setl norelativenumber
 endf
 
-" Copy from spacevim repo
-autocmd BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
+" Copy from spacevim repo just simply quit vim when close the last buffer
+au BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
 			\ q | endif
 
 " Open TagBar if filetype supported when VimEnter
-autocmd VimEnter * nested :call tagbar#autoopen(1)
+au BufEnter * nested :call tagbar#autoopen(1)
