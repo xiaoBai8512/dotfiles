@@ -1,3 +1,28 @@
+"" Vim settings
+filetype plugin indent on
+set autoindent
+set colorcolumn=+1
+set foldenable
+set hidden
+set hlsearch
+set ignorecase
+set laststatus=2
+set mouse=a
+set nobackup
+set nocompatible
+set noerrorbells
+set norelativenumber
+set number
+set ruler
+set shiftwidth=2
+set showmatch
+set softtabstop=2
+set tabstop=2
+set textwidth=100
+set vb t_vb=
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
+set wildmenu
+
 "" Themes
 colorscheme onedark
 set background=dark
@@ -11,6 +36,9 @@ syntax on
 
 "" Plugins
 
+" vim-jsx-pretty
+let g:vim_jsx_pretty_colorful_config = 1
+
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
@@ -23,7 +51,13 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 
 " Airline
+let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamecollapse = 0
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline_powerline_fonts = 1
 
 " AlwaysMathTags
@@ -81,28 +115,3 @@ let g:ale_fixers = {'javascript': ['prettier_eslint']}
 
 " Jsx
 let g:jsx_ext_required = 0
-
-"" Vim settings
-filetype plugin indent on
-set autoindent
-set colorcolumn=+1
-set foldenable
-set hidden
-set hlsearch
-set ignorecase
-set laststatus=2
-set mouse=a
-set nobackup
-set nocompatible
-set noerrorbells
-set norelativenumber
-set number
-set ruler
-set shiftwidth=2
-set showmatch
-set softtabstop=2
-set tabstop=2
-set textwidth=100
-set vb t_vb=
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
-set wildmenu

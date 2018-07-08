@@ -19,6 +19,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'lfv89/vim-interestingwords'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mbbill/undotree'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/vim-plug-plugins/gocode/vim/symlink.sh'  }
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
@@ -60,5 +61,7 @@ Plug 'w0rp/ale'
 Plug 'xolox/vim-misc'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
+
+" Load after above plugins XD
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
