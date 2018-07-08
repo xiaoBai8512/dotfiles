@@ -1,32 +1,64 @@
-" Sync theme from BufferEnter to fix highlighting issues
-au BufEnter * :syntax sync fromstart
-
-" If filetype = python set = to autopep8 to format python code
-au FileType python set equalprg=autopep8\ -
-
 " Welcome page using VimEnter event and via augroup
-augroup Welcome
+aug WelcomePage
 	au!
 	au VimEnter * call s:OpenTagbarAndVimFilerWhenStarted()
-augroup end
+aug end
 
-function! s:OpenTagbarAndVimFilerWhenStarted() abort
+func! s:OpenTagbarAndVimFilerWhenStarted() abort
 	Tagbar
 	VimFiler
 	wincmd p
 endf
 
-" Vimfiler Init
-au FileType vimfiler call s:VimfilerInit()
+" Stolen from spacevim repo just simply quit vim when close the last buffer
+aug VimfilerInitAutoGroup
+	au!
+	" Vimfiler Init
+	au FileType vimfiler call s:VimfilerInit()
+	au BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
+			\ q | endif
+aug end
 
-function! s:VimfilerInit() abort
+func! s:VimfilerInit() abort
 	setl nonumber
 	setl norelativenumber
+	setl nolist
+	silent! nunmap <buffer> s
+	silent! nunmap <buffer> v
+
+	no <silent><buffer> sh  :<C-U>call <SID>vimfiler_vsplit()<CR>
+  no <silent><buffer> sv  :<C-U>call <SID>vimfiler_split()<CR>
+	no <buffer> c <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
+	no <buffer> m <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
+	no <buffer> d <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
 endf
 
-" Copy from spacevim repo just simply quit vim when close the last buffer
-au BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
-			\ q | endif
+func! s:vimfiler_vsplit() abort
+	let path = vimfiler#get_filename()
+	if !isdirectory(path)
+		wincmd p
+		exe 'vsplit' path
+	else
+		echohl ModeMsg
+		echo path . ' is a directory!'
+		echohl NONE
+	endif
+endf
 
-" Open TagBar if filetype supported when VimEnter
-au FileType * nested :call tagbar#autoopen(0)
+func! s:vimfiler_split() abort
+	let path = vimfiler#get_filename()
+	if !isdirectory(path)
+		wincmd p
+		exe 'split' path
+	else
+		echohl ModeMsg
+		echo path . ' is a directory!'
+		echohl NONE
+	endif
+endf
+
+" Sync theme from BufferEnter to fix highlighting issues
+au BufEnter * :syntax sync fromstart
+
+" If filetype = python set = to autopep8 to format python code
+au FileType python set equalprg=autopep8\ -

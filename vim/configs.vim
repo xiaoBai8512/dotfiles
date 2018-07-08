@@ -1,23 +1,18 @@
 "" Themes
 colorscheme onedark
-hi Comment cterm=italic
-hi NonText guifg=bg
 set background=dark
-set guifont=SauceCodePro\ Nerd\ Font:h12
+set guifont=RobotoMono_Nerd_Font:h11
 set guioptions=ai
 set laststatus=2
-set t_Co=256
-set termguicolors
 set nocursorline
+set t_Co=256
 syntax enable
 syntax on
 
 "" Plugins
 
-" YouCompleteMe
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_path_to_python_interpreter = "/usr/local/bin/python"
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -36,7 +31,6 @@ let g:mta_filetypes = {
 			\ 'html' : 1,
 			\ 'javascript.jsx': 1,
 			\ 'jinja' : 1,
-			\ 'vue': 1,
 			\ 'wxml': 1,
 			\ 'xhtml' : 1,
 			\ 'xml' : 1,
@@ -48,7 +42,7 @@ call vimfiler#custom#profile('default', 'context', {
 			\ 'auto_expand' : 1,
 			\ 'direction' : 'rightbelow',
 			\ 'explorer' : 1,
-			\ 'explorer_columns' : 'filetypeicon:gitstatus',
+			\ 'explorer_columns' : 'type:size',
 			\ 'force_hide' : 0,
 			\ 'hidden': 1,
 			\ 'no_quit' : 1,
@@ -57,9 +51,16 @@ call vimfiler#custom#profile('default', 'context', {
 			\ 'split' : 1,
 			\ 'status' : 1,
 			\ 'toggle' : 1,
-			\ 'winminwidth' : 30,
-			\ 'winwidth' : 30,
+			\ 'winwidth' : 35,
 			\ })
+let g:vimfiler_ignore_pattern = [
+			\ '\.class$',
+			\ '^\.',
+			\ '^\.DS_Store$',
+			\ '^\.git$',
+			\ '^\.init\.vim-rplugin\~$',
+			\ '^\.netrwhist$',
+			\]
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_direction = 'rightbelow'
 let g:vimfiler_marked_file_icon = '√'
@@ -75,8 +76,8 @@ let g:tagbar_compact = 1
 let g:tagbar_left = 1
 
 " ALE
-let g:ale_fixers = {'js': ['eslint --fix']}
 let g:ale_fix_on_save = 1
+let g:ale_fixers = {'javascript': ['prettier_eslint']}
 
 " Jsx
 let g:jsx_ext_required = 0
@@ -84,22 +85,24 @@ let g:jsx_ext_required = 0
 "" Vim settings
 filetype plugin indent on
 set autoindent
-set autowrite
-set completeopt=menu
+set colorcolumn=+1
+set foldenable
 set hidden
 set hlsearch
+set ignorecase
 set laststatus=2
 set mouse=a
 set nobackup
 set nocompatible
 set noerrorbells
-set number
 set norelativenumber
+set number
 set ruler
 set shiftwidth=2
+set showmatch
 set softtabstop=2
 set tabstop=2
-set vb t_vb=
 set textwidth=100
-set colorcolumn=+1
+set vb t_vb=
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
+set wildmenu

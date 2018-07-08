@@ -4,4 +4,5 @@ if has('python3')
 endif
 let mapleader = ','
 set encoding=UTF-8
+scriptencoding utf-8
 filetype off
