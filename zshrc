@@ -31,3 +31,5 @@ python
 tmux
 zsh-syntax-highlighting
 )
+
+alias vim="mvim"
