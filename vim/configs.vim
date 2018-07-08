@@ -43,12 +43,12 @@ let g:vim_jsx_pretty_colorful_config = 1
 let g:deoplete#enable_at_startup = 1
 
 " SuperTab
-let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabDefaultCompletionType = '<C-N>'
 
 " UltiSnipates
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger = "<Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
+let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 
 " Airline
 let g:airline#extensions#tabline#buffer_nr_show = 0

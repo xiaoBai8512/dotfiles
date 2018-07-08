@@ -5,7 +5,7 @@ aug WelcomePage
 aug end
 
 func! s:OpenTagbarAndVimFilerWhenStarted() abort
-	Tagbar
+	TagbarOpen
 	VimFiler
 	wincmd p
 endf
