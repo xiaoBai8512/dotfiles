@@ -11,8 +11,9 @@ no <C-Down> ddp
 " Insert mode quick open new line
 ino <C-L> <Esc>o
 
-" Normal mode quick open new line and go back to current mark
+" Normal mode quick open new line up or down and go back to current mark
 no go mmo<ESC>`m
+no gO mmO<ESC>`m
 
 " Normal mode show a prompt for ack search for code
 no <F4> :Ack!<Space>

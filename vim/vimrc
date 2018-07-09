@@ -1,3 +1,4 @@
+" so ~/dotfiles/vim/autoload/*
 so ~/dotfiles/vim/init.vim
 so ~/dotfiles/vim/plugins.vim
 so ~/dotfiles/vim/configs.vim

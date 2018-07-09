@@ -7,7 +7,6 @@ set hidden
 set hlsearch
 set ignorecase
 set laststatus=2
-set mouse=a
 set nobackup
 set nocompatible
 set noerrorbells
@@ -19,15 +18,18 @@ set showmatch
 set softtabstop=2
 set tabstop=2
 set textwidth=100
-set vb t_vb=
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
+
+" GUI specific settings
+set guioptions=ai
+set mouse=a
+set vb t_vb=
 
 "" Themes
 colorscheme onedark
 set background=dark
 set guifont=RobotoMono_Nerd_Font:h11
-set guioptions=ai
 set laststatus=2
 set nocursorline
 set t_Co=256
@@ -36,7 +38,24 @@ syntax on
 
 "" Plugins
 
-" vim-jsx-pretty
+" Emmet
+let g:user_emmet_anchorizesummary_key = '<C-E>A'
+let g:user_emmet_anchorizeurl_key = '<C-E>a'
+let g:user_emmet_balancetaginward_key = '<C-E>d'
+let g:user_emmet_balancetagoutward_key = '<C-E>D'
+let g:user_emmet_codepretty_key = '<C-E>c'
+let g:user_emmet_expandabbr_key = '<C-E>e'
+let g:user_emmet_expandword_key = '<C-E>;'
+let g:user_emmet_imagesize_key = '<C-E>i'
+let g:user_emmet_mergelines_key = '<C-E>m'
+let g:user_emmet_next_key = '<C-E>n'
+let g:user_emmet_prev_key = '<C-E>N'
+let g:user_emmet_removetag_key = '<C-E>k'
+let g:user_emmet_splitjointag_key = '<C-E>j'
+let g:user_emmet_togglecomment_key = '<C-E>/'
+let g:user_emmet_update_tag = '<C-E>u'
+
+" Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
 
 " Deoplete

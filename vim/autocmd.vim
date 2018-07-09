@@ -28,9 +28,9 @@ func! s:VimfilerInit() abort
 
 	no <silent><buffer> sh  :<C-U>call <SID>vimfiler_vsplit()<CR>
   no <silent><buffer> sv  :<C-U>call <SID>vimfiler_split()<CR>
-	no <buffer> c <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
-	no <buffer> m <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
-	no <buffer> d <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
+	" nmap <buffer> c <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
+	" nmap <buffer> m <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
+	" nmap <buffer> d <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
 endf
 
 func! s:vimfiler_vsplit() abort
