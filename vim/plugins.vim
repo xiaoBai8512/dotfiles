@@ -15,11 +15,11 @@ Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
+Plug 'klen/python-mode'
 Plug 'leafgarland/typescript-vim'
 Plug 'lfv89/vim-interestingwords'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mbbill/undotree'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/vim-plug-plugins/gocode/vim/symlink.sh'  }
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }

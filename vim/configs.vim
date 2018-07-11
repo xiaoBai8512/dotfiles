@@ -18,10 +18,10 @@ set showmatch
 set softtabstop=2
 set tabstop=2
 set textwidth=100
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
 
-" GUI specific settings
+"" GUI specific settings
 set guioptions=ai
 set mouse=a
 set vb t_vb=
@@ -38,22 +38,12 @@ syntax on
 
 "" Plugins
 
+" Python-Mode
+let g:pymode_python = 'python3'
+let g:pymode_folding = 1
+
 " Emmet
-let g:user_emmet_anchorizesummary_key = '<C-E>A'
-let g:user_emmet_anchorizeurl_key = '<C-E>a'
-let g:user_emmet_balancetaginward_key = '<C-E>d'
-let g:user_emmet_balancetagoutward_key = '<C-E>D'
-let g:user_emmet_codepretty_key = '<C-E>c'
-let g:user_emmet_expandabbr_key = '<C-E>e'
-let g:user_emmet_expandword_key = '<C-E>;'
-let g:user_emmet_imagesize_key = '<C-E>i'
-let g:user_emmet_mergelines_key = '<C-E>m'
-let g:user_emmet_next_key = '<C-E>n'
-let g:user_emmet_prev_key = '<C-E>N'
-let g:user_emmet_removetag_key = '<C-E>k'
-let g:user_emmet_splitjointag_key = '<C-E>j'
-let g:user_emmet_togglecomment_key = '<C-E>/'
-let g:user_emmet_update_tag = '<C-E>u'
+let g:user_emmet_leader_key = '<C-E>'
 
 " Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
@@ -82,6 +72,7 @@ let g:airline_powerline_fonts = 1
 " AlwaysMathTags
 let g:mta_filetypes = {
 			\ 'html' : 1,
+			\ 'vue': 1,
 			\ 'javascript.jsx': 1,
 			\ 'jinja' : 1,
 			\ 'wxml': 1,
@@ -91,7 +82,6 @@ let g:mta_filetypes = {
 
 " VimFiler
 call vimfiler#custom#profile('default', 'context', {
-			\ 'auto_cd' : 1,
 			\ 'auto_expand' : 1,
 			\ 'direction' : 'rightbelow',
 			\ 'explorer' : 1,
@@ -116,6 +106,7 @@ let g:vimfiler_ignore_pattern = [
 			\]
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_direction = 'rightbelow'
+let g:vimfiler_file_icon = ''
 let g:vimfiler_marked_file_icon = '√'
 let g:vimfiler_readonly_file_icon = '*'
 let g:vimfiler_restore_alternate_file = 1
