@@ -58,6 +58,7 @@ Plug 'vim-python/python-syntax'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vimjas/vim-python-pep8-indent'
 Plug 'w0rp/ale'
+Plug 'wesQ3/vim-windowswap'
 Plug 'xolox/vim-misc'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
