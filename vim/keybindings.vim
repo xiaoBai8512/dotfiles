@@ -11,6 +11,10 @@ no <Down> <Nop>
 no <C-Up> ddkP
 no <C-Down> ddp
 
+" Move multiple lines up and down
+xno <C-Up> :m-2<CR>gv=gv
+xno <C-Down> :m'>+<CR>gv=gv
+
 " Insert mode quick open new line
 ino <C-L> <Esc>o
 
