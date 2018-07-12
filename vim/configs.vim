@@ -42,9 +42,6 @@ syntax on
 let g:pymode_python = 'python3'
 let g:pymode_folding = 1
 
-" Emmet
-let g:user_emmet_leader_key = '<C-E>'
-
 " Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
 

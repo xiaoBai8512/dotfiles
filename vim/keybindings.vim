@@ -1,3 +1,6 @@
+" Emmet combined keys
+imap <C-E>e <plug>(emmet-expand-abbr)<CR><Up><C-L>
+
 " Quit current window
 no <C-X> :q<CR>
 

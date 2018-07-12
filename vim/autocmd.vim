@@ -27,7 +27,7 @@ func! s:VimfilerInit() abort
 	silent! nunmap <buffer> v
 
 	no <silent><buffer> sh  :<C-U>call <SID>vimfiler_vsplit()<CR>
-  no <silent><buffer> sv  :<C-U>call <SID>vimfiler_split()<CR>
+  no <silent><buffer> ss  :<C-U>call <SID>vimfiler_split()<CR>
 endf
 
 func! s:vimfiler_vsplit() abort
