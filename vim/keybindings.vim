@@ -4,12 +4,6 @@ imap <C-E>e <plug>(emmet-expand-abbr)<CR><Up><C-L>
 " Quit current window
 no <C-X> :q<CR>
 
-" Disable direction keys
-no <Left> <Nop>
-no <Right> <Nop>
-no <Up> <Nop>
-no <Down> <Nop>
-
 " Move text line up and line
 no <C-Up> ddkP
 no <C-Down> ddp

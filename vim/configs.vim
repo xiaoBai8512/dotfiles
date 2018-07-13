@@ -1,7 +1,7 @@
 "" Vim settings
 filetype plugin indent on
 set autoindent
-set colorcolumn=+1
+set colorcolumn+=1
 set foldenable
 set hidden
 set hlsearch
@@ -22,7 +22,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS
 set wildmenu
 
 "" GUI specific settings
-set guioptions=ai
+set guioptions=i
 set mouse=a
 set vb t_vb=
 
@@ -65,6 +65,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'molokai'
 
 " AlwaysMathTags
 let g:mta_filetypes = {
