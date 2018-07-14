@@ -59,6 +59,7 @@ let g:SuperTabDefaultCompletionType = '<C-N>'
 let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
+let g:UltiSnipsUsePythonVersion = 2
 
 " Airline
 let g:airline#extensions#tabline#buffer_nr_show = 0
