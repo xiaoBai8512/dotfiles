@@ -9,8 +9,9 @@ set ignorecase
 set laststatus=2
 set nobackup
 set nocompatible
-set noerrorbells
 set norelativenumber
+set noswapfile
+set nowritebackup
 set number
 set ruler
 set shiftwidth=2
@@ -25,6 +26,7 @@ set wildmenu
 set guioptions=i
 set mouse=a
 set vb t_vb=
+set noerrorbells
 
 "" Themes
 colorscheme onedark
@@ -112,6 +114,9 @@ let g:vimfiler_tree_closed_icon = '▷'
 let g:vimfiler_tree_indentation = 1
 let g:vimfiler_tree_leaf_icon = ''
 let g:vimfiler_tree_opened_icon = '▼'
+
+"CtrlP
+let g:ctrlp_max_height = 30
 
 " TagBar
 let g:tagbar_compact = 1
