@@ -12,6 +12,7 @@ set norelativenumber
 set noswapfile
 set nowritebackup
 set number
+set relativenumber
 set ruler
 set shiftwidth=2
 set showmatch
@@ -23,8 +24,8 @@ set wildmenu
 "" GUI specific settings
 set guioptions=i
 set mouse=a
-set vb t_vb=
 set noerrorbells
+set vb t_vb=
 
 "" Themes
 colorscheme onedark

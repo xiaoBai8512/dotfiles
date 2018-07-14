@@ -1,9 +1,16 @@
+" Normal mode open terminal
+no <Leader>` :terminal<CR>
+
 " Quit current window
 no <C-X> :q<CR>
 
 " Move text line up and line
 no <C-Up> ddkP
 no <C-Down> ddp
+
+" Normal mode move up and down half page using U and D
+no D <C-D>
+no U <C-U>
 
 " Move multiple lines up and down
 xno <C-Up> :m-2<CR>gv=gv
@@ -56,4 +63,3 @@ no <Leader>u :UndotreeToggle<Cr>
 " Normal mode quick open new line up or down and go back to current mark
 no go mmo<Esc>`m
 no gO mmO<Esc>`m
-
