@@ -1,7 +1,6 @@
 "" Vim settings
 filetype plugin indent on
 set autoindent
-set colorcolumn+=1
 set foldenable
 set hidden
 set hlsearch
@@ -18,7 +17,6 @@ set shiftwidth=2
 set showmatch
 set softtabstop=2
 set tabstop=2
-set textwidth=100
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
 
