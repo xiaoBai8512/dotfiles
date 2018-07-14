@@ -38,6 +38,9 @@ syntax on
 
 "" Plugins
 
+"Emmet
+let g:user_emmet_expandabbr_key = '<Tab>'
+
 " Python-Mode
 let g:pymode_python = 'python3'
 let g:pymode_folding = 1
