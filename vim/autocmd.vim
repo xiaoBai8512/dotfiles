@@ -1,19 +1,19 @@
-" Welcome page using VimEnter event and via augroup
+"Welcome page using VimEnter event and via augroup
 aug WelcomePage
 	au!
 	au VimEnter * call s:OpenTagbarAndVimFilerWhenStarted()
 aug end
 
 func! s:OpenTagbarAndVimFilerWhenStarted() abort
-	" TagbarOpen
+	"TagbarOpen
 	VimFiler
 	wincmd p
 endf
 
-" Stolen from spacevim repo just simply quit vim when close the last buffer
+"Stolen from spacevim repo just simply quit vim when close the last buffer
 aug VimfilerInitAutoGroup
 	au!
-	" Vimfiler Init
+	"Vimfiler Init
 	au FileType vimfiler call s:VimfilerInit()
 	au BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
 			\ q | endif
@@ -54,8 +54,8 @@ func! s:vimfiler_split() abort
 	endif
 endf
 
-" Sync theme from BufferEnter to fix highlighting issues
+"Sync theme from BufferEnter to fix highlighting issues
 au BufEnter * :syntax sync fromstart
 
-" If filetype = python set = to autopep8 to format python code
+"If filetype = python set = to autopep8 to format python code
 au FileType python set equalprg=autopep8\ -

@@ -1,12 +1,15 @@
 call plug#begin('~/.vim/vim-plug-plugins')
+" Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'chemzqm/wxapp.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'epilande/vim-react-snippets'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
@@ -23,7 +26,6 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/vim-plug-plugins/gocode/vim/symlink.sh'  }
-" Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
 Plug 'moll/vim-node'
@@ -64,6 +66,6 @@ Plug 'xolox/vim-misc'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
 
-" Load after above plugins XD
+"Load after above plugins XD
 Plug 'ryanoasis/vim-devicons'
 call plug#end()

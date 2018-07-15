@@ -1,18 +1,15 @@
-"" Vim settings
+""Vim settings
 filetype plugin indent on
-set autoindent
+set ai "Auto indent
 set foldenable
 set hidden
-set hlsearch
+set hls "highlight search
 set ignorecase
-set laststatus=2
+set ls=2 "Last status
 set nobackup
 set nocompatible
-set norelativenumber
 set noswapfile
 set nowritebackup
-set number
-set relativenumber
 set ruler
 set shiftwidth=4
 set showcmd
@@ -22,47 +19,49 @@ set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
 
-"" GUI specific settings
+""GUI specific settings
 set guioptions=i
 set mouse=a
 set noerrorbells
 set vb t_vb=
 
-"" Themes
+""Themes
 colorscheme onedark
-set background=dark
+set bg=dark "Background color
 set guifont=RobotoMono_Nerd_Font:h11
 set laststatus=2
+set nornu "Relative number
+set nu "Line Number
 set cursorline
-set t_Co=256
+set t_Co=256 "Terminal color
 syntax enable
 syntax on
 
-"" Plugins
+""Plugins
 
 "Emmet
 let g:user_emmet_expandabbr_key = '<Tab>'
 
-" Python-Mode
+"Python-Mode
 let g:pymode_python = 'python3'
 let g:pymode_folding = 1
 
-" Vim-Jsx-Pretty
+"Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
 
-" Deoplete
+"Deoplete
 let g:deoplete#enable_at_startup = 1
 
-" SuperTab
+"SuperTab
 let g:SuperTabDefaultCompletionType = '<C-N>'
 
-" UltiSnipates
+"UltiSnipates
 let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 2
 
-" Airline
+"Airline
 let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamecollapse = 0
@@ -71,9 +70,9 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'simple'
 
-" AlwaysMathTags
+"AlwaysMathTags
 let g:mta_filetypes = {
 			\ 'html' : 1,
 			\ 'vue': 1,
@@ -84,7 +83,7 @@ let g:mta_filetypes = {
 			\ 'xml' : 1,
 			\}
 
-" VimFiler
+"VimFiler
 call vimfiler#custom#profile('default', 'context', {
 			\ 'auto_expand' : 1,
 			\ 'direction' : 'rightbelow',
@@ -108,6 +107,7 @@ let g:vimfiler_ignore_pattern = [
 			\ '^\.init\.vim-rplugin\~$',
 			\ '^\.netrwhist$',
 			\]
+
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_direction = 'rightbelow'
 let g:vimfiler_file_icon = ''
@@ -122,13 +122,13 @@ let g:vimfiler_tree_opened_icon = '▼'
 "CtrlP
 let g:ctrlp_max_height = 30
 
-" TagBar
+"TagBar
 let g:tagbar_compact = 1
 let g:tagbar_left = 1
 
-" ALE
+"ALE
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {'javascript': ['prettier_eslint']}
 
-" Jsx
+"Jsx
 let g:jsx_ext_required = 0

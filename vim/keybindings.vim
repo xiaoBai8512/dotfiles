@@ -19,6 +19,9 @@ xno <C-Down> :m'>+<CR>gv=gv
 " Insert mode quick open new line
 ino <C-L> <Esc>o
 
+" Normal mode ctrl l redraw
+no <Leader>l :nohls<CR>:diffupdate<CR><C-L>
+
 " Insert mode quick jump up and down
 no <C-J> jzz
 no <C-K> kzz
@@ -63,3 +66,7 @@ no <Leader>u :UndotreeToggle<Cr>
 " Normal mode quick open new line up or down and go back to current mark
 no go mmo<Esc>`m
 no gO mmO<Esc>`m
+
+" Normal mode highlight search result when set nohls
+no n :set hls<CR>n
+no N :set hls<CR>N
