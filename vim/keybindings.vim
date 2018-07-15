@@ -9,8 +9,8 @@ no <C-Up> ddkP
 no <C-Down> ddp
 
 " Normal mode move up and down half page using U and D
-no D <C-D>
-no U <C-U>
+no D <C-D>zz
+no U <C-U>zz
 
 " Move multiple lines up and down
 xno <C-Up> :m-2<CR>gv=gv

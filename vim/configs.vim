@@ -14,10 +14,11 @@ set nowritebackup
 set number
 set relativenumber
 set ruler
-set shiftwidth=2
+set shiftwidth=4
+set showcmd
 set showmatch
-set softtabstop=2
-set tabstop=2
+set softtabstop=4
+set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
 
@@ -32,7 +33,7 @@ colorscheme onedark
 set background=dark
 set guifont=RobotoMono_Nerd_Font:h11
 set laststatus=2
-set nocursorline
+set cursorline
 set t_Co=256
 syntax enable
 syntax on
