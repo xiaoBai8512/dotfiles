@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/vim-plug-plugins')
-" Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+
+"Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+"Plug 'nathanaelkane/vim-indent-guides'
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'bronson/vim-trailing-whitespace'
@@ -15,6 +17,7 @@ Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/tabular'
+Plug 'gorodinskiy/vim-coloresque'
 Plug 'haya14busa/incsearch.vim'
 Plug 'herringtonDarkholme/yats.vim'
 Plug 'honza/vim-snippets'
@@ -30,7 +33,6 @@ Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
@@ -63,9 +65,11 @@ Plug 'vimjas/vim-python-pep8-indent'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
 Plug 'xolox/vim-misc'
+Plug 'yggdroot/indentline'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
 
 "Load after above plugins XD
 Plug 'ryanoasis/vim-devicons'
+
 call plug#end()

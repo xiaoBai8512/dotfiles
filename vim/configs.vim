@@ -1,4 +1,4 @@
-""Vim settings
+"Vim settings
 filetype plugin indent on
 set ai "Auto indent
 set foldenable
@@ -18,14 +18,15 @@ set softtabstop=4
 set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
+set list lcs=tab:\|\ "set list set listchars
 
-""GUI specific settings
+"GUI specific settings
 set guioptions=i
 set mouse=a
 set noerrorbells
 set vb t_vb=
 
-""Themes
+"Themes
 colorscheme onedark
 set bg=dark "Background color
 set guifont=RobotoMono_Nerd_Font:h11
@@ -37,7 +38,7 @@ set t_Co=256 "Terminal color
 syntax enable
 syntax on
 
-""Plugins
+"Plugins
 
 "Emmet
 let g:user_emmet_expandabbr_key = '<Tab>'
@@ -138,6 +139,9 @@ let g:ale_fixers = {'javascript': ['prettier_eslint']}
 
 "Multiple cursor
 let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
+
+"Indent line
+let g:indentLine_enabled = 1
 
 "Jsx
 let g:jsx_ext_required = 0
