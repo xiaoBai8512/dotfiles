@@ -45,7 +45,6 @@ Plug 'shougo/deoplete.nvim'
 Plug 'shougo/unite.vim'
 Plug 'shougo/vimfiler.vim'
 Plug 'shougo/vimproc.vim', {'do' : 'make'}
-Plug 'shougo/vimshell'
 Plug 'sirVer/ultisnips'
 Plug 'tell-k/vim-autopep8'
 Plug 'ternjs/tern_for_vim'

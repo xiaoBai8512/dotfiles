@@ -18,7 +18,8 @@ set softtabstop=4
 set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
 set wildmenu
-set list lcs=tab:\|\ "set list set listchars
+set list lcs=tab:\|\ "set list set listchars | https://github.com/Yggdroot/indentLine/issues/111
+set tws="20x0"
 
 "GUI specific settings
 set guioptions=i
@@ -27,7 +28,7 @@ set noerrorbells
 set vb t_vb=
 
 "Themes
-colorscheme onedark
+colorscheme gruvbox
 set bg=dark "Background color
 set guifont=RobotoMono_Nerd_Font:h11
 set laststatus=2
