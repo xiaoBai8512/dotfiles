@@ -59,3 +59,10 @@ au BufEnter * :syntax sync fromstart
 
 "If filetype = python set = to autopep8 to format python code
 au FileType python set equalprg=autopep8\ -
+
+"If current file is a vimrc file then source this file
+au BufWritePost $MYVIMRC . $MYVIMRC
+
+"Insert mode hide cursorline
+au InsertLeave,WinEnter * set cursorline
+au InsertEnter,WinLeave * set nocursorline

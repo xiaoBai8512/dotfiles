@@ -2,7 +2,7 @@
 no <Leader>` :terminal<CR>
 
 " Quit current window
-no <C-X> :q<CR>
+no <C-Z> :q<CR>
 
 " Move text line up and line
 no <C-Up> ddkP
@@ -20,7 +20,7 @@ xno <C-Down> :m'>+<CR>gv=gv
 ino <C-L> <Esc>o
 
 " Normal mode ctrl l redraw
-no <Leader>l :nohls<CR>:diffupdate<CR><C-L>
+no <Leader>l :nohls<CR>:diffupdate<CR>:syntax sync fromstart<C-L>
 
 " Insert mode quick jump up and down
 no <C-J> jzz
@@ -70,3 +70,6 @@ no gO mmO<Esc>`m
 " Normal mode highlight search result when set nohls
 no n :set hls<CR>n
 no N :set hls<CR>N
+" Select mode indention dont lose selections
+xno < <gv
+xno > >gv

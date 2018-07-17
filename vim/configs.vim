@@ -99,6 +99,7 @@ call vimfiler#custom#profile('default', 'context', {
 			\ 'toggle' : 1,
 			\ 'winwidth' : 35,
 			\ })
+"Ignore pattern
 let g:vimfiler_ignore_pattern = [
 			\ '\.class$',
 			\ '^\.',
@@ -106,6 +107,11 @@ let g:vimfiler_ignore_pattern = [
 			\ '^\.git$',
 			\ '^\.init\.vim-rplugin\~$',
 			\ '^\.netrwhist$',
+			\ '\.pyc$',
+			\ '^__pycache__$',
+			\ '^\.tern-port$',
+			\ '^\.tern-project$',
+			\ '^tags$',
 			\]
 
 let g:vimfiler_as_default_explorer = 1
@@ -129,6 +135,9 @@ let g:tagbar_left = 1
 "ALE
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {'javascript': ['prettier_eslint']}
+
+"Multiple cursor
+let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
 
 "Jsx
 let g:jsx_ext_required = 0
