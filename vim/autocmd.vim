@@ -14,6 +14,8 @@ aug VimfilerInitAutoGroup
 	au!
 	"Vimfiler Init
 	au FileType vimfiler call s:VimfilerInit()
+	au FileType vimfiler
+				\ nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
 	au BufEnter * nested if (!has('vim_starting') && winnr('$') == 1 && &filetype ==# 'vimfiler') |
 			\ q | endif
 aug end
@@ -25,6 +27,12 @@ func! s:VimfilerInit() abort
 	silent! nunmap <buffer> s
 	silent! nunmap <buffer> v
 
+	nmap <buffer> c
+				\ <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
+	nmap <buffer> m
+				\ <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
+	nmap <buffer> d
+				\ <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
 	no <silent><buffer> sh  :<C-U>call <SID>vimfiler_vsplit()<CR>
   no <silent><buffer> ss  :<C-U>call <SID>vimfiler_split()<CR>
 endf

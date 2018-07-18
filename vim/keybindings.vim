@@ -22,10 +22,6 @@ ino <C-L> <Esc>o
 "Normal mode ctrl l redraw
 no <Leader>l :nohls<CR>:diffupdate<CR>:syntax sync fromstart<C-L>
 
-"Insert mode quick jump up and down
-no <C-J> jzz
-no <C-K> kzz
-
 "Normal mode show a prompt for ack search for code
 no <F4> :Ack!<Space>
 
