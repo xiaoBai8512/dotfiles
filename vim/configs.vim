@@ -166,7 +166,7 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#arrow_parens = 'always'
 "one|es5|all
 let g:prettier#config#trailing_comma = 'all'
-"low|babylon|typescript|css|less|scss|json|graphql|markdown
+"flow|babylon|typescript|css|less|scss|json|graphql|markdown
 let g:prettier#config#parser = 'flow'
 "cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'file-override'
