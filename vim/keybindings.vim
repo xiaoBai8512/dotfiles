@@ -30,46 +30,50 @@ no <C-K> kzz
 no <F4> :Ack!<Space>
 
 "Normal mode toggle vimfiler
-no <F5> :VimFiler<Cr>
+no <F5> :VimFiler<CR>
 
 "Normal mode toggle Tagbar
-no <F8> :TagbarToggle<Cr>
+no <F8> :TagbarToggle<CR>
 
 "Normal mode jump to match tag
-no <Leader>% :MtaJumpToOtherTag<Cr>
+no <Leader>% :MtaJumpToOtherTag<CR>
 
 "Normal mode source my vimrc file
-no <Leader>so :so ~/.vimrc<Cr>
+no <Leader>so :so $MYVIMRC<CR>
 
 "Normal mode open my vimrc files
-no <Leader>osa :e ~/dotfiles/vim/autocmd.vim<Cr>
-no <Leader>osc :e ~/dotfiles/vim/configs.vim<Cr>
-no <Leader>osi :e ~/dotfiles/vim/init.vim<Cr>
-no <Leader>osk :e ~/dotfiles/vim/keybindings.vim<Cr>
-no <Leader>ospp :e ~/dotfiles/vim/plugins.vim<Cr>
-no <Leader>ospa :e ~/dotfiles/vim/plugins_after.vim<Cr>
+no <Leader>osa :exec "e " . VIMCONFIGDIR . "/autocmd.vim"<CR>
+no <Leader>osc :exec "e " . VIMCONFIGDIR . "/configs.vim"<CR>
+no <Leader>osi :exec "e " . VIMCONFIGDIR . "/init.vim"<CR>
+no <Leader>osk :exec "e " . VIMCONFIGDIR . "/keybindings.vim"<CR>
+no <Leader>ospp :exec "e " . VIMCONFIGDIR . "/plugins.vim"<CR>
+no <Leader>ospa :exec "e " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
 
 "Normal mode install plugin via vim-plug
 no <Leader>ip :PlugInstall<Cr>
 
 "Normal mode save current file
-no <Leader>w :w<Cr>
+no <Leader>w :w<CR>
 
 "Toggle next tab with ctrl + tab
-no <C-Tab> :tabnext<Cr>
+no <C-Tab> :tabnext<CR>
 "Toggle previous tab with ctrl + shift + tab
-no <C-S-Tab> :tabprev<Cr>
+no <C-S-Tab> :tabprev<CR>
 
 "Toggle undotree by leader + u
-no <Leader>u :UndotreeToggle<Cr>
+no <Leader>u :UndotreeToggle<CR>
 
 "Normal mode quick open new line up or down and go back to current mark
 no go mmo<Esc>`m
 no gO mmO<Esc>`m
 
 "Normal mode highlight search result when set nohls
-no n :set hls<CR>n
-no N :set hls<CR>N
+no <expr>n :set hls<CR>n
+no <expr>N :set hls<CR>N
+
 "Select mode indention dont lose selections
 xno < <gv
 xno > >gv
+
+"Emmet
+imap <Tab> <plug>(emmet-expand-abbr)

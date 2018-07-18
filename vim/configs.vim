@@ -5,6 +5,7 @@ set foldenable
 set hidden
 set hls "highlight search
 set ignorecase
+set list lcs=tab:\|\ "set list set listchars | https://github.com/Yggdroot/indentLine/issues/111
 set ls=2 "Last status
 set nobackup
 set nocompatible
@@ -16,10 +17,8 @@ set showcmd
 set showmatch
 set softtabstop=4
 set tabstop=4
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc
 set wildmenu
-set list lcs=tab:\|\ "set list set listchars | https://github.com/Yggdroot/indentLine/issues/111
-set tws="20x0"
 
 "GUI specific settings
 set guioptions=i
@@ -28,21 +27,18 @@ set noerrorbells
 set vb t_vb=
 
 "Themes
-colorscheme gruvbox
+colorscheme onedark
 set bg=dark "Background color
+set cursorline
 set guifont=RobotoMono_Nerd_Font:h11
 set laststatus=2
-set nornu "Relative number
 set nu "Line Number
-set cursorline
+set rnu "Relative number
 set t_Co=256 "Terminal color
 syntax enable
 syntax on
 
 "Plugins
-
-"Emmet
-let g:user_emmet_expandabbr_key = '<Tab>'
 
 "Python-Mode
 let g:pymode_python = 'python3'
@@ -62,6 +58,7 @@ let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
 
 "Airline
 let g:airline#extensions#tabline#buffer_nr_show = 0
@@ -70,7 +67,7 @@ let g:airline#extensions#tabline#fnamecollapse = 0
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
 
@@ -90,7 +87,7 @@ call vimfiler#custom#profile('default', 'context', {
 			\ 'auto_expand' : 1,
 			\ 'direction' : 'rightbelow',
 			\ 'explorer' : 1,
-			\ 'explorer_columns' : 'type:size',
+			\ 'explorer_columns' : 'type',
 			\ 'force_hide' : 0,
 			\ 'hidden': 1,
 			\ 'no_quit' : 1,
@@ -135,8 +132,11 @@ let g:tagbar_compact = 1
 let g:tagbar_left = 1
 
 "ALE
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {'javascript': ['prettier_eslint']}
+let g:ale_fixers = {
+			\ 'javascript': ['prettier','prettier_eslint'],
+			\ 'scss': ['prettier','prettier_eslint'],
+			\ 'sass': ['prettier','prettier_eslint'],
+			\}
 
 "Multiple cursor
 let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
@@ -146,3 +146,29 @@ let g:indentLine_enabled = 1
 
 "Jsx
 let g:jsx_ext_required = 0
+
+"Prettier
+"max line length that prettier will wrap on
+let g:prettier#config#print_width = 80
+"number of spaces per indentation level
+let g:prettier#config#tab_width = 4
+"use tabs over spaces
+let g:prettier#config#use_tabs = 'true'
+"print semicolons
+let g:prettier#config#semi = 'false'
+"single quotes over double quotes
+let g:prettier#config#single_quote = 'true'
+"print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true'
+"put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'false'
+"void|always
+let g:prettier#config#arrow_parens = 'always'
+"one|es5|all
+let g:prettier#config#trailing_comma = 'all'
+"low|babylon|typescript|css|less|scss|json|graphql|markdown
+let g:prettier#config#parser = 'flow'
+"cli-override|file-override|prefer-file
+let g:prettier#config#config_precedence = 'file-override'
+"always|never|preserve
+let g:prettier#config#prose_wrap = 'preserve'

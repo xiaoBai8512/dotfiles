@@ -5,7 +5,6 @@ aug WelcomePage
 aug end
 
 func! s:OpenTagbarAndVimFilerWhenStarted() abort
-	"TagbarOpen
 	VimFiler
 	wincmd p
 endf
@@ -61,7 +60,7 @@ au BufEnter * :syntax sync fromstart
 au FileType python set equalprg=autopep8\ -
 
 "If current file is a vimrc file then source this file
-au BufWritePost $MYVIMRC . $MYVIMRC
+au BufWritePost $MYVIMRC :exec "so $MYVIMRC"
 
 "Insert mode hide cursorline
 au InsertLeave,WinEnter * set cursorline
