@@ -3,8 +3,9 @@ if has('python3')
 	silent! python3 1
 endif
 
-" Map Leader key to comma ','
-let mapleader = ','
+" Map Leader key to comma ',' at the very begining
+let mapleader = ' '
+let maplocalleader = "\\"
 
 " Encoding UTF-8
 set encoding=UTF-8

@@ -1,24 +1,30 @@
 "Vim settings
 filetype plugin indent on
-set ai "Auto indent
+set autoindent "Auto indent
+set expandtab
 set foldenable
 set hidden
 set hls "highlight search
 set ignorecase
-set list lcs=tab:\|\ "set list set listchars | https://github.com/Yggdroot/indentLine/issues/111
-set ls=2 "Last status
+set laststatus=2 "Last status
+set list listchars=tab:\|\ "set list set listchars | https://github.com/Yggdroot/indentLine/issues/111
+set modeline
 set nobackup
 set nocompatible
+set nostartofline
 set noswapfile
+set notimeout ttimeout
 set nowritebackup
-set pt="<F2>"
+set pastetoggle="<F2>"
 set ruler
 set shiftwidth=4
 set showcmd
 set showmatch
 set softtabstop=4
+set splitbelow
+set splitright
 set tabstop=4
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc,*/dist/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc
 set wildmenu
 
 "GUI specific settings
@@ -29,12 +35,12 @@ set vb t_vb=
 
 "Themes
 colorscheme onedark
-set bg=dark "Background color
+set background=dark "Background color
 set cursorline
 set guifont=RobotoMono_Nerd_Font:h12
 set laststatus=2
-set nu "Line Number
-set rnu "Relative number
+set number "Line Number
+set relativenumber "Relative number
 set t_Co=256 "Terminal color
 syntax enable
 syntax on
@@ -59,7 +65,7 @@ let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
+" let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
 
 "Airline
 let g:airline#extensions#tabline#buffer_nr_show = 0

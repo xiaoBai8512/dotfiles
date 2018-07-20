@@ -71,3 +71,6 @@ au BufWritePost $MYVIMRC :exec "so $MYVIMRC"
 "Insert mode hide cursorline
 au InsertLeave,WinEnter * set cursorline
 au InsertEnter,WinLeave * set nocursorline
+
+"Nginx
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
