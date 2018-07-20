@@ -11,17 +11,18 @@ set nobackup
 set nocompatible
 set noswapfile
 set nowritebackup
+set pt="<F2>"
 set ruler
 set shiftwidth=4
 set showcmd
 set showmatch
 set softtabstop=4
 set tabstop=4
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/dist/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc,*/dist/*
 set wildmenu
 
 "GUI specific settings
-set guioptions=i
+set guioptions=iP
 set mouse=a
 set noerrorbells
 set vb t_vb=
@@ -30,7 +31,7 @@ set vb t_vb=
 colorscheme onedark
 set bg=dark "Background color
 set cursorline
-set guifont=RobotoMono_Nerd_Font:h11
+set guifont=RobotoMono_Nerd_Font:h12
 set laststatus=2
 set nu "Line Number
 set rnu "Relative number
@@ -172,3 +173,6 @@ let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'file-override'
 "always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
+
+"White Space ignore
+let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'unite', 'mkd']

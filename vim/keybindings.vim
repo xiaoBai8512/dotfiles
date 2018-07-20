@@ -38,12 +38,12 @@ no <Leader>% :MtaJumpToOtherTag<CR>
 no <Leader>so :so $MYVIMRC<CR>
 
 "Normal mode open my vimrc files
-no <Leader>osa :exec "e " . VIMCONFIGDIR . "/autocmd.vim"<CR>
-no <Leader>osc :exec "e " . VIMCONFIGDIR . "/configs.vim"<CR>
-no <Leader>osi :exec "e " . VIMCONFIGDIR . "/init.vim"<CR>
-no <Leader>osk :exec "e " . VIMCONFIGDIR . "/keybindings.vim"<CR>
-no <Leader>ospp :exec "e " . VIMCONFIGDIR . "/plugins.vim"<CR>
-no <Leader>ospa :exec "e " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
+no <Leader>osa :exec "tabnew " . VIMCONFIGDIR . "/autocmd.vim"<CR>
+no <Leader>osc :exec "tabnew " . VIMCONFIGDIR . "/configs.vim"<CR>
+no <Leader>osi :exec "tabnew " . VIMCONFIGDIR . "/init.vim"<CR>
+no <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
+no <Leader>ospp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
+no <Leader>ospa :exec "tabnew " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
 
 "Normal mode install plugin via vim-plug
 no <Leader>ip :PlugInstall<Cr>
@@ -63,13 +63,16 @@ no <Leader>u :UndotreeToggle<CR>
 no go mmo<Esc>`m
 no gO mmO<Esc>`m
 
-"Normal mode highlight search result when set nohls
-no <expr>n :set hls<CR>n
-no <expr>N :set hls<CR>N
-
 "Select mode indention dont lose selections
 xno < <gv
 xno > >gv
 
 "Emmet
-imap <Tab> <plug>(emmet-expand-abbr)
+imap <C-]> <plug>(emmet-expand-abbr)
+
+xno @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+func! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunc

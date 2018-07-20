@@ -4,10 +4,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 	au VimEnter * PlugInstall --sync | so $MYVIMRC
 endif
 
+"Vim-plug
 call plug#begin('~/.vim/vim-plug-plugins')
 
 Plug 'andrewradev/splitjoin.vim'
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
 Plug 'chemzqm/wxapp.vim'
@@ -25,6 +25,8 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'herringtonDarkholme/yats.vim'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
 Plug 'klen/python-mode'
 Plug 'leafgarland/typescript-vim', {'do': 'yarn global add tsc'}
