@@ -173,6 +173,3 @@ let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'file-override'
 "always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
-
-"White Space ignore
-let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'unite', 'mkd']
