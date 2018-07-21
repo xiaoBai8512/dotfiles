@@ -1,16 +1,16 @@
-"Normal mode open terminal
-no <Leader>` :exec "terminal"<CR>
-
 "Quit current window
 no <C-Z> :q<CR>
-
-"Move text line up and line
-no <C-Up> ddkP
-no <C-Down> ddp
 
 "Normal mode move up and down half page using U and D
 no D <C-D>zz
 no U <C-U>zz
+
+"Normal mode cancel K to list manual page
+no K <Nop>
+
+"Move text line up and line
+no <C-Up> :m-2<CR>
+no <C-Down> :m'>+<CR>
 
 "Move multiple lines up and down
 xno <C-Up> :m-2<CR>gv=gv
@@ -25,9 +25,6 @@ no gk k
 "Insert mode quick open new line
 ino <C-L> <Esc>o
 
-"Normal mode ctrl l redraw
-no <Leader>l :exec "nohls \| diffupdate \| syntax sync fromstart"<CR><C-L>
-
 "Normal mode show a prompt for ack search for code
 no <F4> :Ack!<Space>
 
@@ -37,8 +34,14 @@ no <F5> :exec "VimFiler"<CR>
 "Normal mode toggle Tagbar
 no <F8> :exec "TagbarToggle"<CR>
 
+"Normal mode open terminal
+no <Leader>` :exec "terminal"<CR>
+
+"Normal mode ctrl l redraw
+no <Leader>l :exec "nohls \| diffupdate \| syntax sync fromstart"<CR><C-L>
+
 "Normal mode jump to match tag
-no <Leader>% :MtaJumpToOtherTag<CR>
+no <Leader>% :exec "MtaJumpToOtherTag"<CR>
 
 "Normal mode source my vimrc file
 no <Leader>so :exec "so " . $MYVIMRC<CR>
@@ -56,10 +59,21 @@ no <Leader>ip :exec "so " . $MYVIMRC "\| PlugInstall"<CR>
 no <Leader>up :exec "so " . $MYVIMRC "\| PlugUpdate"<CR>
 
 "Normal mode save current file
-no <Leader>w :w<CR>
+no <Leader>w :exec "write"<CR>
 
+"LocalLeader
 "Toggle undotree by leader + u
-no <Leader>U :exec "UndotreeToggle"<CR>
+no <LocalLeader>U :exec "UndotreeToggle"<CR>
+"Fuzzy finder find files
+no <LocalLeader>F :exec "Files"<CR>
+"Fuzzy finder help tags
+no <LocalLeader>H :exec "Helptags"<CR>
+"Fuzzy finder help about commands
+no <LocalLeader>CM :exec "Commands"<CR>
+"Fuzzy finder help about commits
+no <LocalLeader>CC :exec "Commits"<CR>
+"Fuzzy finder help about maps
+no <LocalLeader>M :exec "Maps"<CR>
 
 "Normal mode quick open new line up or down and go back to current mark
 no go mmo<Esc>`m

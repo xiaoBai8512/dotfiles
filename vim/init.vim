@@ -5,7 +5,7 @@ endif
 
 " Map Leader key to comma ',' at the very begining
 let mapleader = ' '
-let maplocalleader = "\\"
+let maplocalleader = '\'
 
 " Encoding UTF-8
 set encoding=UTF-8
