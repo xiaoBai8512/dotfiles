@@ -1,6 +1,8 @@
 "Quit current window
 no <C-Z> :q<CR>
 
+"Disable space to jump a character
+no <Space> <Nop>
 "Normal mode move up and down half page using U and D
 no D <C-D>zz
 no U <C-U>zz
@@ -54,9 +56,10 @@ no <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
 no <Leader>ospp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
 no <Leader>ospa :exec "tabnew " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
 
-"Normal mode install and update plugin via vim-plug
-no <Leader>ip :exec "so " . $MYVIMRC "\| PlugInstall"<CR>
-no <Leader>up :exec "so " . $MYVIMRC "\| PlugUpdate"<CR>
+"Vim-Plug
+no <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
+no <Leader>PU :exec "so $MYVIMRC \| PlugUpdate"<CR>
+no <Leader>PC :exec "so $MYVIMRC \| PlugClean"<CR>
 
 "Normal mode save current file
 no <Leader>w :exec "write"<CR>

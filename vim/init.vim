@@ -8,7 +8,7 @@ let mapleader = ' '
 let maplocalleader = '\'
 
 " Encoding UTF-8
-set encoding=UTF-8
+set encoding=utf-8
 
 " ScriptEncoding UTF-8
 scriptencoding utf-8

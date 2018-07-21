@@ -17,6 +17,7 @@ set notimeout ttimeout
 set nowritebackup
 set pastetoggle="<F2>"
 set ruler
+set shell=/bin/bash
 set shiftwidth=4
 set showcmd
 set showmatch
@@ -64,8 +65,7 @@ let g:SuperTabDefaultCompletionType = '<C-N>'
 let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
-let g:UltiSnipsUsePythonVersion = 2
-" let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
+let g:UltiSnipsUsePythonVersion = 3
 
 "Airline
 let g:airline#extensions#tabline#buffer_nr_show = 0
@@ -155,6 +155,7 @@ let g:indentLine_enabled = 1
 let g:jsx_ext_required = 0
 
 "Prettier
+let g:prettier#autoformat = 0
 "max line length that prettier will wrap on
 let g:prettier#config#print_width = 80
 "number of spaces per indentation level
