@@ -34,10 +34,10 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-fold'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
+Plug 'kien/rainbow_parentheses.vim'
 Plug 'klen/python-mode'
 Plug 'leafgarland/typescript-vim', {'do': 'yarn global add tsc'}
 Plug 'lfv89/vim-interestingwords'
-Plug 'machakann/vim-swap'
 Plug 'majutsushi/tagbar', {'do': 'yarn global add git+https://github.com/ramitos/jsctags.git'}
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
@@ -52,7 +52,10 @@ Plug 'nginx/nginx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
-Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'prettier/vim-prettier', {
+            \ 'do': 'yarn install',
+            \ 'for': ['javascript', 'typescript', 'css',
+            \         'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'raimondi/delimitmate'
 Plug 'roxma/nvim-yarp'
@@ -76,7 +79,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
 Plug 'valloric/MatchTagAlways'
 Plug 'vim-airline/vim-airline'
@@ -85,7 +87,6 @@ Plug 'vim-python/python-syntax'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vimjas/vim-python-pep8-indent'
 Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier'}
-Plug 'wesQ3/vim-windowswap'
 Plug 'xolox/vim-misc'
 Plug 'yggdroot/indentline'
 Plug 'zchee/deoplete-go', {'do': 'make'}

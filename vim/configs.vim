@@ -180,6 +180,3 @@ let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'file-override'
 "always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
-
-"Swap window
-let g:windowswap_map_keys = 0
