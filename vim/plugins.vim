@@ -37,6 +37,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'klen/python-mode'
 Plug 'leafgarland/typescript-vim', {'do': 'yarn global add tsc'}
 Plug 'lfv89/vim-interestingwords'
+Plug 'machakann/vim-swap'
 Plug 'majutsushi/tagbar', {'do': 'yarn global add git+https://github.com/ramitos/jsctags.git'}
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
