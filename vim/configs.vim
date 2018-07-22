@@ -30,6 +30,7 @@ set nolazyredraw " Don't redraw while executing macros
 set magic " Set magic on, for regex
 set ttyfast " Faster redrawing
 set scrolloff=7
+set macmeta
 
 "GUI specific settings
 set guioptions=i

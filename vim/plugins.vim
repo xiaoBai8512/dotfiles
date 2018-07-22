@@ -25,7 +25,6 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'haya14busa/incsearch.vim'
 Plug 'herringtonDarkholme/yats.vim'
 Plug 'honza/vim-snippets'
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
@@ -102,5 +101,6 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'amix/vim-zenroom2'
 Plug 'amix/open_file_under_cursor.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 call plug#end()

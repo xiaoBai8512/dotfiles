@@ -19,6 +19,7 @@ xnoremap <C-Down> :m'>+<CR>gv=gv
 noremap <C-E> 20<C-E>
 noremap <C-Y> 20<C-Y>
 
+"Easy navigate between windows
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
@@ -33,8 +34,8 @@ noremap gk k
 "Insert mode quick open new line
 inoremap <C-L> <Esc>o
 
-"Normal mode toggle NERDTree
-noremap <F5> :exec "NERDTreeToggle"<CR>
+"Normal mode toggle NERDTree (think as File list)
+noremap <Leader>fl :exec "NERDTreeToggle"<CR>
 
 "Normal mode toggle Tagbar
 noremap <F8> :exec "TagbarToggle"<CR>
@@ -42,11 +43,19 @@ noremap <F8> :exec "TagbarToggle"<CR>
 "Open new tab
 noremap <Leader>tn :exec "tabnew"<CR>
 
+"Zen mode using goyo and resize to 200 width
+noremap <silent> <Leader>z :exec 'Goyo 200 \| setl nu rnu'<CR>
+noremap <silent> <Leader>Z :exec "Goyo!"<CR>
+
+"Bind enter key to navigate between tabs
+noremap <CR> :exec "tabnext"<CR>
+noremap <S-CR> :exec "tabprev"<CR>
+
 "Normal mode open terminal
 noremap <Leader>` :exec "terminal"<CR>
 
-"Normal mode ctrl l redraw
-noremap <Leader>l :exec "nohls \| diffupdate \| syntax sync fromstart"<CR><C-L>
+"Normal mode escape for redraw window and sync highlighting
+noremap <Esc> :exec 'nohls \| diffupdate \| syntax sync fromstart'<CR><C-L>
 
 "Normal mode jump to match tag
 noremap <Leader>% :exec "MtaJumpToOtherTag"<CR>

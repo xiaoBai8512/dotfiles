@@ -27,3 +27,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+"Goyo intergration with limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
