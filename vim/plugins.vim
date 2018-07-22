@@ -13,7 +13,7 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'chemzqm/wxapp.vim'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
-Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
+Plug 'carlitux/deoplete-ternjs', {'for': ['javascript', 'javascript.jsx', 'vue', 'typescript'], 'do': 'yarn global add tern'}
 Plug 'herringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
@@ -25,10 +25,10 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'leafgarland/typescript-vim', {'for': 'typescript', 'do': 'yarn global add tsc'}
 Plug 'mhartington/nvim-typescript', {'for': 'typescript', 'do': 'cd ./rplugin/node/nvim_typescript && yarn install && yarn build'}
 Plug 'moll/vim-node', {'for': 'javascript'}
-Plug 'mxw/vim-jsx', {'for': ['javascript.jsx', 'javascript']}
-Plug 'othree/yajs.vim', {'for': [ 'javascript', 'javascript.jsx', 'html']}
-Plug 'othree/html5.vim', {'for': ['html', 'vue', 'javascript', 'javascript.jsx']}
-Plug 'ternjs/tern_for_vim', {'do': 'yarn global add tern'}
+Plug 'mxw/vim-jsx', {'for': ['javascript.jsx', 'javascript', 'typescript']}
+Plug 'othree/yajs.vim', {'for': [ 'javascript', 'javascript.jsx', 'html', 'typescript']}
+Plug 'othree/html5.vim', {'for': ['html', 'vue', 'javascript', 'javascript.jsx', 'typescript']}
+Plug 'ternjs/tern_for_vim', {'for': ['javascript', 'javascript.jsx', 'vue', 'typescript'], 'do': 'yarn global add tern'}
 Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier '
             \ . 'eslint-plugin-react eslint-plugin-vue'}
 " }}}
