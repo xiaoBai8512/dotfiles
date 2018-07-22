@@ -9,12 +9,9 @@ set ignorecase
 set laststatus=2 "Last status
 set list listchars=tab:\|\ "set list set listchars | https://github.com/Yggdroot/indentLine/issues/111
 set modeline
-set nobackup
 set nocompatible
 set nostartofline
-set noswapfile
 set notimeout ttimeout
-set nowritebackup
 set pastetoggle="<F2>"
 set ruler
 set shell=/bin/bash
@@ -27,9 +24,15 @@ set splitright
 set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc
 set wildmenu
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set nolazyredraw " Don't redraw while executing macros
+set magic " Set magic on, for regex
+set ttyfast " Faster redrawing
+set scrolloff=7
 
 "GUI specific settings
-set guioptions=iP
+set guioptions=i
 set mouse=a
 set noerrorbells
 set vb t_vb=
@@ -43,8 +46,7 @@ set laststatus=2
 set number "Line Number
 set relativenumber "Relative number
 set t_Co=256 "Terminal color
-syntax enable
-syntax on
+if !exists('g:syntax_on') | syntax enable | endif
 
 "Plugins
 
@@ -88,48 +90,6 @@ let g:mta_filetypes = {
 			\ 'xhtml' : 1,
 			\ 'xml' : 1,
 			\}
-
-"VimFiler
-call vimfiler#custom#profile('default', 'context', {
-			\ 'auto_expand' : 1,
-			\ 'direction' : 'rightbelow',
-			\ 'explorer' : 1,
-			\ 'explorer_columns' : 'type',
-			\ 'force_hide' : 0,
-			\ 'hidden': 1,
-			\ 'no_quit' : 1,
-			\ 'parent': 0,
-			\ 'safe' : 0,
-			\ 'split' : 1,
-			\ 'status' : 1,
-			\ 'toggle' : 1,
-			\ 'winwidth' : 35,
-			\ })
-"Ignore pattern
-let g:vimfiler_ignore_pattern = [
-			\ '\.class$',
-			\ '^\.',
-			\ '^\.DS_Store$',
-			\ '^\.git$',
-			\ '^\.init\.vim-rplugin\~$',
-			\ '^\.netrwhist$',
-			\ '\.pyc$',
-			\ '^__pycache__$',
-			\ '^\.tern-port$',
-			\ '^\.tern-project$',
-			\ '^tags$',
-			\]
-
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_direction = 'rightbelow'
-let g:vimfiler_file_icon = ''
-let g:vimfiler_marked_file_icon = '√'
-let g:vimfiler_readonly_file_icon = '*'
-let g:vimfiler_restore_alternate_file = 1
-let g:vimfiler_tree_closed_icon = '▷'
-let g:vimfiler_tree_indentation = 1
-let g:vimfiler_tree_leaf_icon = ''
-let g:vimfiler_tree_opened_icon = '▼'
 
 "CtrlP
 let g:ctrlp_max_height = 30
@@ -180,3 +140,6 @@ let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'file-override'
 "always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
+
+"Emmet
+let g:user_emmet_leader_key = '<C-T>'

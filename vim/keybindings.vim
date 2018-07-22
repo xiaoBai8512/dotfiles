@@ -1,96 +1,104 @@
 "Quit current window
-no <C-Z> :q<CR>
+noremap <C-Z> :q<CR>
 
 "Disable space to jump a character
-no <Space> <Nop>
-"Normal mode move up and down half page using U and D
-no D <C-D>zz
-no U <C-U>zz
+noremap <Space> <Nop>
 
 "Normal mode cancel K to list manual page
-no K <Nop>
+noremap K <Nop>
 
 "Move text line up and line
-no <C-Up> :m-2<CR>
-no <C-Down> :m'>+<CR>
+noremap <C-Up> :m-2<CR>
+noremap <C-Down> :m'>+<CR>
 
 "Move multiple lines up and down
-xno <C-Up> :m-2<CR>gv=gv
-xno <C-Down> :m'>+<CR>gv=gv
+xnoremap <C-Up> :m-2<CR>gv=gv
+xnoremap <C-Down> :m'>+<CR>gv=gv
+
+"Move cursor keep cursor position
+noremap <C-E> 20<C-E>
+noremap <C-Y> 20<C-Y>
+
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
 
 "Normalize wrap mode jump
-no j gj
-no k gk
-no gj j
-no gk k
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
 
 "Insert mode quick open new line
-ino <C-L> <Esc>o
+inoremap <C-L> <Esc>o
 
-"Normal mode show a prompt for ack search for code
-no <F4> :Ack!<Space>
-
-"Normal mode toggle vimfiler
-no <F5> :exec "VimFiler"<CR>
+"Normal mode toggle NERDTree
+noremap <F5> :exec "NERDTreeToggle"<CR>
 
 "Normal mode toggle Tagbar
-no <F8> :exec "TagbarToggle"<CR>
+noremap <F8> :exec "TagbarToggle"<CR>
+
+"Open new tab
+noremap <Leader>tn :exec "tabnew"<CR>
 
 "Normal mode open terminal
-no <Leader>` :exec "terminal"<CR>
+noremap <Leader>` :exec "terminal"<CR>
 
 "Normal mode ctrl l redraw
-no <Leader>l :exec "nohls \| diffupdate \| syntax sync fromstart"<CR><C-L>
+noremap <Leader>l :exec "nohls \| diffupdate \| syntax sync fromstart"<CR><C-L>
 
 "Normal mode jump to match tag
-no <Leader>% :exec "MtaJumpToOtherTag"<CR>
+noremap <Leader>% :exec "MtaJumpToOtherTag"<CR>
 
 "Normal mode source my vimrc file
-no <Leader>so :exec "so " . $MYVIMRC<CR>
+noremap <Leader>so :exec "so " . $MYVIMRC<CR>
 
 "Normal mode open my vimrc files
-no <Leader>osa :exec "tabnew " . VIMCONFIGDIR . "/autocmd.vim"<CR>
-no <Leader>osc :exec "tabnew " . VIMCONFIGDIR . "/configs.vim"<CR>
-no <Leader>osi :exec "tabnew " . VIMCONFIGDIR . "/init.vim"<CR>
-no <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
-no <Leader>ospp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
-no <Leader>ospa :exec "tabnew " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
+noremap <Leader>osa :exec "tabnew " . VIMCONFIGDIR . "/autocmd.vim"<CR>
+noremap <Leader>osc :exec "tabnew " . VIMCONFIGDIR . "/configs.vim"<CR>
+noremap <Leader>osi :exec "tabnew " . VIMCONFIGDIR . "/init.vim"<CR>
+noremap <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
+noremap <Leader>ospp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
+noremap <Leader>ospa :exec "tabnew " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
 
 "Vim-Plug
-no <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
-no <Leader>PU :exec "so $MYVIMRC \| PlugUpdate"<CR>
-no <Leader>PC :exec "so $MYVIMRC \| PlugClean"<CR>
+noremap <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
+noremap <Leader>PU :exec "so $MYVIMRC \| PlugUpdate"<CR>
+noremap <Leader>PC :exec "so $MYVIMRC \| PlugClean"<CR>
 
 "Normal mode save current file
-no <Leader>w :exec "write"<CR>
+noremap <silent> <Leader>w :exec "write"<CR>
 
 "LocalLeader
 "Toggle undotree by leader + u
-no <LocalLeader>U :exec "UndotreeToggle"<CR>
+noremap <LocalLeader>U :exec "UndotreeToggle"<CR>
 "Fuzzy finder find files
-no <LocalLeader>F :exec "Files"<CR>
+noremap <LocalLeader>F :exec "Files"<CR>
 "Fuzzy finder help tags
-no <LocalLeader>H :exec "Helptags"<CR>
+noremap <LocalLeader>H :exec "Helptags"<CR>
 "Fuzzy finder help about commands
-no <LocalLeader>CM :exec "Commands"<CR>
+noremap <LocalLeader>CM :exec "Commands"<CR>
 "Fuzzy finder help about commits
-no <LocalLeader>CC :exec "Commits"<CR>
+noremap <LocalLeader>CC :exec "Commits"<CR>
 "Fuzzy finder help about maps
-no <LocalLeader>M :exec "Maps"<CR>
+noremap <LocalLeader>M :exec "Maps"<CR>
+"Normal mode show a prompt for ack search for code
+noremap <LocalLeader>A :Ack!<Space>
 
 "Normal mode quick open new line up or down and go back to current mark
-no go mmo<Esc>`m
-no gO mmO<Esc>`m
+noremap go mmo<Esc>`m
+noremap gO mmO<Esc>`m
 
 "Select mode indention dont lose selections
-xno < <gv
-xno > >gv
+xnoremap < <gv
+xnoremap > >gv
 
 "Emmet
 imap <C-]> <plug>(emmet-expand-abbr)
 
 "Excute macros multiple lines
-xno @ :<C-U>call ExecuteMacroOverVisualRange()<CR>
+xnoremap @ :<C-U>call ExecuteMacroOverVisualRange()<CR>
 func! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())

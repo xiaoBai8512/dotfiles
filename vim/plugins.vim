@@ -1,8 +1,8 @@
 "Automatic install plugins when there is no plugin installed from vimenter
 if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	au VimEnter * PlugInstall --sync | so $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    au VimEnter * PlugInstall --sync | so $MYVIMRC
 endif
 
 "Vim-plug
@@ -32,8 +32,11 @@ Plug 'junegunn/vim-xmark'
 Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-fold'
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-function'
+Plug 'coderifous/textobj-word-column.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'klen/python-mode'
 Plug 'leafgarland/typescript-vim', {'do': 'yarn global add tsc'}
@@ -65,7 +68,6 @@ Plug 'shougo/deol.nvim'
 Plug 'shougo/deoplete.nvim'
 Plug 'shougo/neco-syntax'
 Plug 'shougo/unite.vim'
-Plug 'shougo/vimfiler.vim', {'do': 'brew install rmtrash'}
 Plug 'shougo/vimproc.vim', {'do': 'make'}
 Plug 'sirVer/ultisnips'
 Plug 'tell-k/vim-autopep8', {'do': 'pip install autopep8'}
@@ -86,13 +88,19 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-python/python-syntax'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vimjas/vim-python-pep8-indent'
-Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier'}
+Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier '
+            \ . 'eslint-plugin-react eslint-plugin-vue'}
 Plug 'xolox/vim-misc'
 Plug 'yggdroot/indentline'
 Plug 'zchee/deoplete-go', {'do': 'make'}
 Plug 'zchee/deoplete-jedi'
-
-"Load after above plugins XD
-Plug 'ryanoasis/vim-devicons'
+Plug 'danro/rename.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'rking/ag.vim', {'do': 'brew install ag'}
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'amix/vim-zenroom2'
+Plug 'amix/open_file_under_cursor.vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
