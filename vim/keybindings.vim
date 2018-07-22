@@ -7,13 +7,16 @@ noremap <Space> <Nop>
 "Normal mode cancel K to list manual page
 noremap K <Nop>
 
+"Normal mode cancel backspace key
+noremap <BS> <Nop>
+
 "Move text line up and line
-noremap <C-Up> :m-2<CR>
-noremap <C-Down> :m'>+<CR>
+noremap <silent> <C-Up> :m-2<CR>
+noremap <silent> <C-Down> :m+1<CR>
 
 "Move multiple lines up and down
-xnoremap <C-Up> :m-2<CR>gv=gv
-xnoremap <C-Down> :m'>+<CR>gv=gv
+xnoremap <silent> <C-Up> :m-2<CR>gv=gv
+xnoremap <silent> <C-Down> :m'>+<CR>gv=gv
 
 "Move cursor keep cursor position
 noremap <C-E> 20<C-E>
@@ -55,7 +58,7 @@ noremap <S-CR> :exec "tabprev"<CR>
 noremap <Leader>` :exec "terminal"<CR>
 
 "Normal mode escape for redraw window and sync highlighting
-noremap <Esc> :exec 'nohls \| diffupdate \| syntax sync fromstart'<CR><C-L>
+noremap <silent> <BS> :exec 'nohls \| diffupdate \| syntax sync fromstart \| redraw'<CR>
 
 "Normal mode jump to match tag
 noremap <Leader>% :exec "MtaJumpToOtherTag"<CR>
