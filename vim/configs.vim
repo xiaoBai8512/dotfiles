@@ -144,3 +144,10 @@ let g:prettier#config#prose_wrap = 'preserve'
 
 "Emmet
 let g:user_emmet_leader_key = '<C-T>'
+
+"NERDTree
+let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinSize = 35
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeShowHidden = 1

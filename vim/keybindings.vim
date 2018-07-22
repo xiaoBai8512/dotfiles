@@ -68,8 +68,8 @@ noremap <Leader>osa :exec "tabnew " . VIMCONFIGDIR . "/autocmd.vim"<CR>
 noremap <Leader>osc :exec "tabnew " . VIMCONFIGDIR . "/configs.vim"<CR>
 noremap <Leader>osi :exec "tabnew " . VIMCONFIGDIR . "/init.vim"<CR>
 noremap <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
-noremap <Leader>ospp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
-noremap <Leader>ospa :exec "tabnew " . VIMCONFIGDIR . "/plugins_after.vim"<CR>
+noremap <Leader>osp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
+noremap <Leader>osv :exec "tabnew " . VIMCONFIGDIR . "/vimrc"<CR>
 
 "Vim-Plug
 noremap <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
