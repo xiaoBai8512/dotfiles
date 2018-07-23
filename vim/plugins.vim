@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.vim/vim-plug-plugins')
 
 "Javascript html and css {{{
+Plug 'tenfyzhong/CompleteParameter.vim'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'chemzqm/wxapp.vim'
 Plug 'honza/vim-snippets'
@@ -105,5 +106,19 @@ Plug 'amix/vim-zenroom2'
 Plug 'amix/open_file_under_cursor.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'rhysd/clever-f.vim'
+Plug 'shougo/context_filetype.vim'
+Plug 'ujihisa/neco-look'
+Plug 'shougo/neco-syntax'
+Plug 'shougo/neocomplete.vim'
+Plug 'neomake/neomake'
+Plug 'shougo/neoinclude.vim'
+Plug 'shougo/neopairs.vim'
+Plug 'shougo/neosnippet.vim'
+Plug 'shougo/neosnippet-snippets'
+Plug 't9md/vim-choosewin'
+Plug 'haya14busa/vim-easyoperator-line'
+Plug 'mhinz/vim-grepper'
+Plug 'osyo-manga/vim-jplus'
 
 call plug#end()

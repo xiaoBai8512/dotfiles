@@ -29,7 +29,6 @@ macports
 pip
 pod
 python
-tmux
 zsh-syntax-highlighting
 )
 

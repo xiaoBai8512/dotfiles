@@ -22,7 +22,7 @@ set softtabstop=4
 set splitbelow
 set splitright
 set tabstop=4
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc,*/.ropeproject/*
 set wildmenu
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -30,7 +30,7 @@ set nolazyredraw " Don't redraw while executing macros
 set magic " Set magic on, for regex
 set ttyfast " Faster redrawing
 set scrolloff=7
-set macmeta
+if(has('mac')) | set macmeta | endif "Set metakey enabled when current system is macos for Yankstack
 
 "GUI specific settings
 set guioptions=i
@@ -44,6 +44,9 @@ set background=dark "Background color
 set cursorline
 set guifont=RobotoMono_Nerd_Font:h12
 set laststatus=2
+if exists('+colorcolumn')
+    set colorcolumn=80
+endif
 set number "Line Number
 set relativenumber "Relative number
 set t_Co=256 "Terminal color
@@ -54,6 +57,8 @@ if !exists('g:syntax_on') | syntax enable | endif
 "Python-Mode
 let g:pymode_python = 'python3'
 let g:pymode_folding = 1
+let g:pymode_rope_completion_bind = '<S-Space>'
+let g:pymode_rope_autoimport = 0
 
 "Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
@@ -71,26 +76,26 @@ let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 3
 
 "Airline
-let g:airline#extensions#tabline#buffer_nr_show = 0
+" let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamecollapse = 0
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_splits = 0
+" let g:airline#extensions#tabline#fnamecollapse = 0
+" let g:airline#extensions#tabline#show_buffers = 0
+" let g:airline#extensions#tabline#show_close_button = 0
+" let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
 
 "AlwaysMathTags
 let g:mta_filetypes = {
-			\ 'html' : 1,
-			\ 'vue': 1,
-			\ 'javascript.jsx': 1,
-			\ 'jinja' : 1,
-			\ 'wxml': 1,
-			\ 'xhtml' : 1,
-			\ 'xml' : 1,
-			\}
+            \ 'html' : 1,
+            \ 'vue': 1,
+            \ 'javascript.jsx': 1,
+            \ 'jinja' : 1,
+            \ 'wxml': 1,
+            \ 'xhtml' : 1,
+            \ 'xml' : 1,
+            \}
 
 "CtrlP
 let g:ctrlp_max_height = 30
@@ -101,10 +106,10 @@ let g:tagbar_left = 1
 
 "ALE
 let g:ale_fixers = {
-			\ 'javascript': ['prettier','prettier_eslint'],
-			\ 'scss': ['prettier','prettier_eslint'],
-			\ 'sass': ['prettier','prettier_eslint'],
-			\}
+            \ 'javascript': ['prettier','prettier_eslint'],
+            \ 'scss': ['prettier','prettier_eslint'],
+            \ 'sass': ['prettier','prettier_eslint'],
+            \}
 
 "Multiple cursor
 let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
@@ -151,3 +156,9 @@ let g:NERDTreeWinSize = 35
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeRespectWildIgnore = 1
+let g:NERDTreeMouseMode = 2
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeAutoCenter = 1

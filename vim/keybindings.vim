@@ -57,7 +57,8 @@ noremap <S-CR> :exec "tabprev"<CR>
 "Normal mode open terminal
 noremap <Leader>` :exec "terminal"<CR>
 
-"Normal mode escape for redraw window and sync highlighting
+"Normal mode escape for redraw window and sync highlighting, this is beacuse
+"of <C-L> is used for navigating windows
 noremap <silent> <BS> :exec 'nohls \| diffupdate \| syntax sync fromstart \| redraw'<CR>
 
 "Normal mode jump to match tag
@@ -78,6 +79,12 @@ noremap <Leader>osv :exec "tabnew " . VIMCONFIGDIR . "/vimrc"<CR>
 noremap <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
 noremap <Leader>PU :exec "so $MYVIMRC \| PlugUpdate"<CR>
 noremap <Leader>PC :exec "so $MYVIMRC \| PlugClean"<CR>
+
+"Jplus
+nmap J <Plug>(jplus)
+vmap J <Plug>(jplus)
+nmap <Leader>J <Plug>(jplus-getchar)
+vmap <Leader>J <Plug>(jplus-getchar)
 
 "Normal mode save current file
 noremap <silent> <Leader>w :exec "write"<CR>
