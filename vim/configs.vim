@@ -29,7 +29,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set nolazyredraw " Don't redraw while executing macros
 set magic " Set magic on, for regex
 set ttyfast " Faster redrawing
-set scrolloff=7
+set scrolloff=7 "Set scrolloff for more visible context top and below
 if(has('mac')) | set macmeta | endif "Set metakey enabled when current system is macos for Yankstack
 
 "GUI specific settings
@@ -76,15 +76,15 @@ let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 3
 
 "Airline
-" let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'simple'
 " let g:airline#extensions#tabline#fnamecollapse = 0
 " let g:airline#extensions#tabline#show_buffers = 0
 " let g:airline#extensions#tabline#show_close_button = 0
 " let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'simple'
+" let g:airline#extensions#tabline#buffer_nr_show = 0
 
 "AlwaysMathTags
 let g:mta_filetypes = {
@@ -116,7 +116,7 @@ let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
 
 "Indent line
 let g:indentLine_enabled = 1
-
+let g:indentLine_setConceal = 0
 "Jsx
 let g:jsx_ext_required = 0
 

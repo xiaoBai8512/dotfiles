@@ -100,7 +100,6 @@ Plug 'zchee/deoplete-jedi'
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'rking/ag.vim', {'do': 'brew install ag'}
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'amix/vim-zenroom2'
 Plug 'amix/open_file_under_cursor.vim'

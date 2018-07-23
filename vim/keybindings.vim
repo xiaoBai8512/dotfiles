@@ -59,6 +59,7 @@ noremap <Leader>` :exec "terminal"<CR>
 
 "Normal mode escape for redraw window and sync highlighting, this is beacuse
 "of <C-L> is used for navigating windows
+"Cant bind to <Esc> beacuse it will cause E481 no range allowed warning
 noremap <silent> <BS> :exec 'nohls \| diffupdate \| syntax sync fromstart \| redraw'<CR>
 
 "Normal mode jump to match tag
