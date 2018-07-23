@@ -157,6 +157,9 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeRespectWildIgnore = 1
+let g:NERDTreeIgnore = ['\.swo$', '\.swp$', '^\.git$',
+            \'\.pyc', '\.ropeproject', '__pycache__', 'tern-port',
+            \'tern-project']
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeShowHidden = 1

@@ -28,6 +28,12 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
+"Easy resize window
+noremap <silent> <S-Up> :res +1<CR>
+noremap <silent> <S-Down> :res -1<CR>
+noremap <silent> <S-Left> :vertical res -1<CR>
+noremap <silent> <S-Right> :vertical res +1<CR>
+
 "Normalize wrap mode jump
 noremap j gj
 noremap k gk
