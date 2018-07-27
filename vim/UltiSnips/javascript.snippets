@@ -1,13 +1,5 @@
-snippet rcc "react skeleton" b
-import React, { Component } from 'react'
-
-class ${1:ClassComponent} extends Component {
-	render() {
-		return (
-				<${2:div}>
-				$3
-				</{div}>
-			   )
-	}
+snippet fun "function def" b
+${2:void} ${1:name}($3){
+    ${4:${VISUAL}}      // <--- 这行加了个 ${VISUAL}
 }
 endsnippet

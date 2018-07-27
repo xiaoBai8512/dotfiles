@@ -1,120 +1,118 @@
 "Quit current window
-noremap <C-Z> :q<CR>
+nnoremap <C-Z> :q<CR>
 
 "Disable space to jump a character
-noremap <Space> <Nop>
+nnoremap <Space> <Nop>
 
 "Normal mode cancel K to list manual page
-noremap K <Nop>
+nnoremap K <Nop>
 
-"Normal mode cancel backspace key
-noremap <BS> <Nop>
+"Yank till end of the line
+nnoremap Y y$
 
 "Move text line up and line
-noremap <silent> <C-Up> :m-2<CR>
-noremap <silent> <C-Down> :m+1<CR>
+nnoremap <silent> <C-Up> :m-2<CR>
+nnoremap <silent> <C-Down> :m+1<CR>
 
 "Move multiple lines up and down
 xnoremap <silent> <C-Up> :m-2<CR>gv=gv
 xnoremap <silent> <C-Down> :m'>+<CR>gv=gv
 
-"Move cursor keep cursor position
-noremap <C-E> 20<C-E>
-noremap <C-Y> 20<C-Y>
-
 "Easy navigate between windows
-noremap <C-J> <C-W>j
-noremap <C-K> <C-W>k
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
 
 "Easy resize window
-noremap <silent> <S-Up> :res +1<CR>
-noremap <silent> <S-Down> :res -1<CR>
-noremap <silent> <S-Left> :vertical res -1<CR>
-noremap <silent> <S-Right> :vertical res +1<CR>
+nnoremap <silent> <S-Up> :res +1<CR>
+nnoremap <silent> <S-Down> :res -1<CR>
+nnoremap <silent> <S-Left> :vertical res -1<CR>
+nnoremap <silent> <S-Right> :vertical res +1<CR>
 
 "Normalize wrap mode jump
-noremap j gj
-noremap k gk
-noremap gj j
-noremap gk k
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 
 "Insert mode quick open new line
-inoremap <C-L> <Esc>o
+inoremap <silent> <C-CR> <Esc>o
+inoremap <silent> <C-S-CR> <Esc>O
 
 "Normal mode toggle NERDTree (think as File list)
-noremap <Leader>fl :exec "NERDTreeToggle"<CR>
+nnoremap <silent> <Leader>fl :exec "NERDTreeToggle"<CR>
 
 "Normal mode toggle Tagbar
-noremap <F8> :exec "TagbarToggle"<CR>
+nnoremap <silent> <F8> :exec "TagbarToggle"<CR>
 
 "Open new tab
-noremap <Leader>tn :exec "tabnew"<CR>
+nnoremap <silent> <Leader>tn :exec "tabnew"<CR>
 
 "Zen mode using goyo and resize to 200 width
-noremap <silent> <Leader>z :exec 'Goyo 200 \| setl nu rnu'<CR>
-noremap <silent> <Leader>Z :exec "Goyo!"<CR>
-
-"Bind enter key to navigate between tabs
-noremap <CR> :exec "tabnext"<CR>
-noremap <S-CR> :exec "tabprev"<CR>
+nnoremap <silent> <Leader>z :exec 'Goyo 200 \| setl nu rnu'<CR>
+nnoremap <silent> <Leader>Z :exec "Goyo!"<CR>
 
 "Normal mode open terminal
-noremap <Leader>` :exec "terminal"<CR>
+nnoremap <Leader>` :exec "terminal"<CR>
 
 "Normal mode escape for redraw window and sync highlighting, this is beacuse
 "of <C-L> is used for navigating windows
 "Cant bind to <Esc> beacuse it will cause E481 no range allowed warning
-noremap <silent> <BS> :exec 'nohls \| diffupdate \| syntax sync fromstart \| redraw'<CR>
+nnoremap <silent> <BS> :exec 'nohls \| diffupdate \| syntax sync fromstart \| redraw'<CR>
 
 "Normal mode jump to match tag
-noremap <Leader>% :exec "MtaJumpToOtherTag"<CR>
+nnoremap <silent> <Leader>% :exec "MtaJumpToOtherTag"<CR>
 
 "Normal mode source my vimrc file
-noremap <Leader>so :exec "so " . $MYVIMRC<CR>
+nnoremap <Leader>so :exec "so " . $MYVIMRC<CR>
 
 "Normal mode open my vimrc files
-noremap <Leader>osa :exec "tabnew " . VIMCONFIGDIR . "/autocmd.vim"<CR>
-noremap <Leader>osc :exec "tabnew " . VIMCONFIGDIR . "/configs.vim"<CR>
-noremap <Leader>osi :exec "tabnew " . VIMCONFIGDIR . "/init.vim"<CR>
-noremap <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
-noremap <Leader>osp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
-noremap <Leader>osv :exec "tabnew " . VIMCONFIGDIR . "/vimrc"<CR>
+nnoremap <silent> <Leader>osa :exec "tabnew " . VIMCONFIGDIR . "/autocmd.vim"<CR>
+nnoremap <silent> <Leader>osc :exec "tabnew " . VIMCONFIGDIR . "/configs.vim"<CR>
+nnoremap <silent> <Leader>osi :exec "tabnew " . VIMCONFIGDIR . "/init.vim"<CR>
+nnoremap <silent> <Leader>osk :exec "tabnew " . VIMCONFIGDIR . "/keybindings.vim"<CR>
+nnoremap <silent> <Leader>osp :exec "tabnew " . VIMCONFIGDIR . "/plugins.vim"<CR>
+nnoremap <silent> <Leader>osv :exec "tabnew " . VIMCONFIGDIR . "/vimrc"<CR>
 
 "Vim-Plug
-noremap <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
-noremap <Leader>PU :exec "so $MYVIMRC \| PlugUpdate"<CR>
-noremap <Leader>PC :exec "so $MYVIMRC \| PlugClean"<CR>
+nnoremap <silent> <Leader>PI :exec "so $MYVIMRC \| PlugInstall"<CR>
+nnoremap <silent> <Leader>PU :exec "so $MYVIMRC \| PlugUpdate"<CR>
+nnoremap <silent> <Leader>PC :exec "so $MYVIMRC \| PlugClean"<CR>
 
 "Jplus
-nmap J <Plug>(jplus)
+nnoremap J <Plug>(jplus)
 vmap J <Plug>(jplus)
-nmap <Leader>J <Plug>(jplus-getchar)
+nnoremap <Leader>J <Plug>(jplus-getchar)
 vmap <Leader>J <Plug>(jplus-getchar)
 
+"ChooseWindows
+nmap , <Plug>(choosewin)
+
 "Normal mode save current file
-noremap <silent> <Leader>w :exec "write"<CR>
+nnoremap <silent> <Leader>w :exec "write"<CR>
 
 "LocalLeader
 "Toggle undotree by leader + u
-noremap <LocalLeader>U :exec "UndotreeToggle"<CR>
+nnoremap <LocalLeader>U :exec "UndotreeToggle"<CR>
 "Fuzzy finder find files
-noremap <LocalLeader>F :exec "Files"<CR>
+nnoremap <LocalLeader>F :exec "Files"<CR>
 "Fuzzy finder help tags
-noremap <LocalLeader>H :exec "Helptags"<CR>
+nnoremap <LocalLeader>H :exec "Helptags"<CR>
 "Fuzzy finder help about commands
-noremap <LocalLeader>CM :exec "Commands"<CR>
+nnoremap <LocalLeader>CM :exec "Commands"<CR>
 "Fuzzy finder help about commits
-noremap <LocalLeader>CC :exec "Commits"<CR>
+nnoremap <LocalLeader>CC :exec "Commits"<CR>
 "Fuzzy finder help about maps
-noremap <LocalLeader>M :exec "Maps"<CR>
+nnoremap <LocalLeader>M :exec "Maps"<CR>
 "Normal mode show a prompt for ack search for code
-noremap <LocalLeader>A :Ack!<Space>
+nnoremap <LocalLeader>A :Ack!<Space>
+"Normal mode show a prompt for Buffers list
+nnoremap <LocalLeader>B :exec "Buffers"<CR>
 
 "Normal mode quick open new line up or down and go back to current mark
-noremap go mmo<Esc>`m
-noremap gO mmO<Esc>`m
+nnoremap go mmo<Esc>`m
+nnoremap gO mmO<Esc>`m
 
 "Select mode indention dont lose selections
 xnoremap < <gv
@@ -123,9 +121,30 @@ xnoremap > >gv
 "Emmet
 imap <C-]> <plug>(emmet-expand-abbr)
 
+"Neosnippets
+imap <expr><TAB>
+            \ pumvisible() ? "\<C-n>" :
+            \ neosnippet#expandable_or_jumpable() ?
+            \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
 "Excute macros multiple lines
 xnoremap @ :<C-U>call ExecuteMacroOverVisualRange()<CR>
 func! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
+    echo "@".getcmdline()
+    execute ":'<,'>normal @".nr2char(getchar())
 endfunc
+
+"Ctrlp-Funky
+nnoremap <Leader>fu :CtrlPFunky<CR>
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<CR>
+
+"LanguageClient
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+"Toggle cursorline and relativenumber
+nnoremap <silent> <Leader>RN :set relativenumber cursorline<CR>
+nnoremap <silent> <Leader>rn :set norelativenumber nocursorline<CR>

@@ -19,9 +19,6 @@ au FileType python set equalprg=autopep8\ -
 "If current file is a vimrc file then source this file
 au BufWritePost $MYVIMRC :exec "so $MYVIMRC"
 
-"Nginx
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
-
 "RainbowParentheses
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -31,3 +28,9 @@ au Syntax * RainbowParenthesesLoadBraces
 "Goyo intergration with limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+"Startify
+autocmd User Startified setlocal cursorline
+
+"Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync

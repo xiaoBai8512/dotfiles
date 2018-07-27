@@ -24,13 +24,19 @@ set splitright
 set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc,*/.ropeproject/*
 set wildmenu
+set noswapfile
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set nolazyredraw " Don't redraw while executing macros
 set magic " Set magic on, for regex
 set ttyfast " Faster redrawing
 set scrolloff=7 "Set scrolloff for more visible context top and below
-if(has('mac')) | set macmeta | endif "Set metakey enabled when current system is macos for Yankstack
+set fileformat=unix "Unix file format by default
+set fileformats=unix,dos,mac "Available formats
+set clipboard=unnamed
+if has("gui_running")
+    set macmeta "Set metakey enabled when current system is macos for Yankstack
+endif
 
 "GUI specific settings
 set guioptions=i
@@ -42,15 +48,15 @@ set vb t_vb=
 colorscheme onedark
 set background=dark "Background color
 set cursorline
-set guifont=RobotoMono_Nerd_Font:h12
+set relativenumber "Relative number
+set guifont=RobotoMono_Nerd_Font:h14
 set laststatus=2
 if exists('+colorcolumn')
     set colorcolumn=80
 endif
 set number "Line Number
-set relativenumber "Relative number
 set t_Co=256 "Terminal color
-if !exists('g:syntax_on') | syntax enable | endif
+" if !exists('g:syntax_on') | syntax enable | endif
 
 "Plugins
 
@@ -58,7 +64,7 @@ if !exists('g:syntax_on') | syntax enable | endif
 let g:pymode_python = 'python3'
 let g:pymode_folding = 1
 let g:pymode_rope_completion_bind = '<S-Space>'
-let g:pymode_rope_autoimport = 0
+let g:pymode_rope_autoimport = 1
 
 "Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
@@ -66,30 +72,24 @@ let g:vim_jsx_pretty_colorful_config = 1
 "Deoplete
 let g:deoplete#enable_at_startup = 1
 
-"SuperTab
-let g:SuperTabDefaultCompletionType = '<C-N>'
-
 "UltiSnipates
 let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
 
 "Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'simple'
-" let g:airline#extensions#tabline#fnamecollapse = 0
-" let g:airline#extensions#tabline#show_buffers = 0
-" let g:airline#extensions#tabline#show_close_button = 0
-" let g:airline#extensions#tabline#show_splits = 0
-" let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline_theme = 'dracula'
 
 "AlwaysMathTags
 let g:mta_filetypes = {
             \ 'html' : 1,
             \ 'vue': 1,
+            \ 'javascript': 1,
             \ 'javascript.jsx': 1,
             \ 'jinja' : 1,
             \ 'wxml': 1,
@@ -99,6 +99,7 @@ let g:mta_filetypes = {
 
 "CtrlP
 let g:ctrlp_max_height = 30
+let g:ctrlp_extensions = ['funky']
 
 "TagBar
 let g:tagbar_compact = 1
@@ -122,6 +123,8 @@ let g:jsx_ext_required = 0
 
 "Prettier
 let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+let g:prettier#quickfix_auto_focus = 1
 "max line length that prettier will wrap on
 let g:prettier#config#print_width = 80
 "number of spaces per indentation level
@@ -149,6 +152,12 @@ let g:prettier#config#prose_wrap = 'preserve'
 
 "Emmet
 let g:user_emmet_leader_key = '<C-T>'
+"For jsx feature
+let g:user_emmet_settings = {
+            \  'javascript.jsx' : {
+            \      'extends' : 'jsx',
+            \  },
+            \}
 
 "NERDTree
 let g:NERDTreeWinPos = 'right'
@@ -161,7 +170,22 @@ let g:NERDTreeIgnore = ['\.swo$', '\.swp$', '^\.git$',
             \'\.pyc', '\.ropeproject', '__pycache__', 'tern-port',
             \'tern-project']
 let g:NERDTreeMouseMode = 2
-let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 0
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeAutoCenter = 1
+
+"LanguageClient-neovim
+let g:LanguageClient_serverCommands = {
+            \ 'javascript.jsx': ['javascript-typescript-langserver'],
+            \ 'javascript': ['javascript-typescript-langserver'],
+            \ }
+
+"Autopairs
+let g:AutoPairsShortcutToggle = ''
+
+"Ack Search
+let g:ack_autoclose = 1
+
+"Yankstack
+let g:yankstack_yank_keys = ['y', 'd']

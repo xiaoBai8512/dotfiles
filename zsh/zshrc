@@ -14,6 +14,7 @@ export PATH=$GOPATH/bin:$PATH
 export ANDROID_HOME=~/Library/Android/sdk
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/
 export ZSH=~/.oh-my-zsh
+alias v="mvim"
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
@@ -31,5 +32,3 @@ pod
 python
 zsh-syntax-highlighting
 )
-
-alias vim="mvim"
