@@ -30,12 +30,6 @@ nnoremap <silent> <S-Down> :res -1<CR>
 nnoremap <silent> <S-Left> :vertical res -1<CR>
 nnoremap <silent> <S-Right> :vertical res +1<CR>
 
-"Normalize wrap mode jump
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
-
 "Insert mode quick open new line
 inoremap <silent> <C-CR> <Esc>o
 inoremap <silent> <C-S-CR> <Esc>O
@@ -46,8 +40,9 @@ nnoremap <silent> <Leader>fl :exec "NERDTreeToggle"<CR>
 "Normal mode toggle Tagbar
 nnoremap <silent> <F8> :exec "TagbarToggle"<CR>
 
-"Open new tab
+"Tab
 nnoremap <silent> <Leader>tn :exec "tabnew"<CR>
+nnoremap <Leader>tr :TabooRename<Space>
 
 "Zen mode using goyo and resize to 200 width
 nnoremap <silent> <Leader>z :exec 'Goyo 200 \| setl nu rnu'<CR>
@@ -146,5 +141,5 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 "Toggle cursorline and relativenumber
-nnoremap <silent> <Leader>RN :set relativenumber cursorline<CR>
-nnoremap <silent> <Leader>rn :set norelativenumber nocursorline<CR>
+nnoremap <silent> <Leader>rn :set relativenumber cursorline<CR>
+nnoremap <silent> <Leader>RN :set norelativenumber nocursorline<CR>

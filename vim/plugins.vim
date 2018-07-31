@@ -12,23 +12,22 @@ call plug#begin('~/.vim/vim-plug-plugins')
 Plug 'chemzqm/wxapp.vim'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
-Plug 'carlitux/deoplete-ternjs', {'for': ['javascript', 'javascript.jsx', 'vue', 'typescript'], 'do': 'yarn global add tern'}
+Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
 Plug 'herringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'prettier/vim-prettier', {
-            \ 'do': 'yarn install',
-            \ 'for': ['javascript', 'typescript', 'css',
-            \         'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'leafgarland/typescript-vim', {'for': 'typescript', 'do': 'yarn global add tsc'}
-Plug 'moll/vim-node', {'for': 'javascript'}
+Plug 'leafgarland/typescript-vim', {'do': 'yarn global add tsc'}
+Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx', {'for': ['javascript.jsx', 'javascript', 'typescript']}
-Plug 'othree/yajs.vim', {'for': [ 'javascript', 'javascript.jsx', 'html', 'typescript']}
-Plug 'othree/html5.vim', {'for': ['html', 'vue', 'javascript', 'javascript.jsx', 'typescript']}
-Plug 'ternjs/tern_for_vim', {'for': ['javascript', 'javascript.jsx', 'vue', 'typescript'], 'do': 'yarn global add tern'}
+Plug 'othree/yajs.vim'
+Plug 'othree/html5.vim'
+Plug 'ternjs/tern_for_vim', {'do': 'yarn global add tern'}
 Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier '
             \ . 'eslint-plugin-react eslint-plugin-vue'}
 Plug 'mattn/emmet-vim'
+Plug 'posva/vim-vue'
+Plug 'heavenshell/vim-jsdoc'
 " }}}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'andrewradev/splitjoin.vim'
@@ -111,10 +110,17 @@ Plug 'mhinz/vim-grepper'
 Plug 'osyo-manga/vim-jplus'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'tpope/vim-unimpaired'
+Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',
-            \ 'do': 'bash install.sh && yarn global add javascript-typescript-langserver',
+            \ 'do': 'bash install.sh && yarn global add javascript-typescript-langserver javascript-typescript-stdio',
             \ }
+Plug 'chrisbra/csv.vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'gcmt/taboo.vim'
+
+"Always load as the very last one
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

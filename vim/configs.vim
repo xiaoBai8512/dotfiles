@@ -1,6 +1,10 @@
 "Vim settings
 filetype plugin indent on
 set autoindent "Auto indent
+set smartindent
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
 set foldenable
 set hidden
@@ -14,14 +18,10 @@ set nostartofline
 set notimeout ttimeout
 set pastetoggle="<F2>"
 set ruler
-set shell=/bin/bash
-set shiftwidth=4
 set showcmd
 set showmatch
-set softtabstop=4
 set splitbelow
 set splitright
-set tabstop=4
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc,*/.ropeproject/*
 set wildmenu
 set noswapfile
@@ -34,6 +34,7 @@ set scrolloff=7 "Set scrolloff for more visible context top and below
 set fileformat=unix "Unix file format by default
 set fileformats=unix,dos,mac "Available formats
 set clipboard=unnamed
+set sessionoptions+=tabpages,globals
 if has("gui_running")
     set macmeta "Set metakey enabled when current system is macos for Yankstack
 endif
@@ -47,8 +48,8 @@ set vb t_vb=
 "Themes
 colorscheme onedark
 set background=dark "Background color
-set cursorline
-set relativenumber "Relative number
+set nocursorline
+set norelativenumber "Relative number
 set guifont=RobotoMono_Nerd_Font:h14
 set laststatus=2
 if exists('+colorcolumn')
@@ -56,7 +57,8 @@ if exists('+colorcolumn')
 endif
 set number "Line Number
 set t_Co=256 "Terminal color
-" if !exists('g:syntax_on') | syntax enable | endif
+set cmdheight=2
+if !exists('g:syntax_on') | syntax enable | endif
 
 "Plugins
 
@@ -81,9 +83,13 @@ let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
 
 "Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number
+let g:airline#extensions#tabline#tab_nr_type = 2 " Tab number
+let g:airline#extensions#tabline#fnamecollapse = 0
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'onedark'
+
+"Taboo rename tab
+let g:taboo_tabline = 0
 
 "AlwaysMathTags
 let g:mta_filetypes = {
@@ -111,6 +117,7 @@ let g:ale_fixers = {
             \ 'scss': ['prettier','prettier_eslint'],
             \ 'sass': ['prettier','prettier_eslint'],
             \}
+let g:ale_use_global_executables = 1
 
 "Multiple cursor
 let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
@@ -118,8 +125,12 @@ let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
 "Indent line
 let g:indentLine_enabled = 1
 let g:indentLine_setConceal = 0
+
 "Jsx
 let g:jsx_ext_required = 0
+
+"Vim-vue
+let g:vue_disable_pre_processors = 1
 
 "Prettier
 let g:prettier#autoformat = 0
@@ -175,10 +186,16 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeAutoCenter = 1
 
+"DevIcons
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:airline_powerline_fonts = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+
 "LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
-            \ 'javascript.jsx': ['javascript-typescript-langserver'],
-            \ 'javascript': ['javascript-typescript-langserver'],
+            \ 'javascript.jsx': ['javascript-typescript-stdio'],
+            \ 'javascript': ['javascript-typescript-stdio'],
             \ }
 
 "Autopairs

@@ -7,10 +7,10 @@ endif
 let mapleader = ' '
 let maplocalleader = '\'
 
-set encoding=utf-8
+set encoding=utf8
 
 " ScriptEncoding UTF-8
-scriptencoding utf-8
+scriptencoding UTF-8
 
 " Needed for plugins
 filetype off
