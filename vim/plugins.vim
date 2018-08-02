@@ -17,7 +17,7 @@ Plug 'herringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'leafgarland/typescript-vim', {'do': 'yarn global add tsc'}
+Plug 'leafgarland/typescript-vim', {'do': 'yarn global add typescript'}
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx', {'for': ['javascript.jsx', 'javascript', 'typescript']}
 Plug 'othree/yajs.vim'
@@ -72,6 +72,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'shougo/unite.vim'
 Plug 'shougo/vimproc.vim', {'do': 'make'}
 Plug 'sirVer/ultisnips'
+Plug 'rstacruz/vim-ultisnips-css'
 Plug 'tell-k/vim-autopep8', {'do': 'pip install autopep8'}
 Plug 'terryma/vim-expand-region'
 Plug 'terryma/vim-multiple-cursors'
@@ -101,9 +102,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'ujihisa/neco-look'
-Plug 'shougo/neopairs.vim'
-Plug 'shougo/neosnippet.vim'
-Plug 'shougo/neosnippet-snippets'
 Plug 't9md/vim-choosewin'
 Plug 'haya14busa/vim-easyoperator-line'
 Plug 'mhinz/vim-grepper'
@@ -114,13 +112,17 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',
-            \ 'do': 'bash install.sh && yarn global add javascript-typescript-langserver javascript-typescript-stdio',
+            \ 'do': 'bash install.sh && ' .
+            \ 'yarn global add javascript-typescript-langserver' .
+            \ 'go get -u github.com/sourcegraph/go-langserver',
             \ }
 Plug 'chrisbra/csv.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'gcmt/taboo.vim'
 
 "Always load as the very last one
-Plug 'ryanoasis/vim-devicons'
+if !has('gui_running')
+    Plug 'ryanoasis/vim-devicons'
+endif
 
 call plug#end()

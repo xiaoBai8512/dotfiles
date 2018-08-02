@@ -24,14 +24,12 @@ set splitbelow
 set splitright
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/.swp,*/.DS_Store,*/__pycache__/*,*/.pyc,*/.ropeproject/*
 set wildmenu
-set noswapfile
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set nolazyredraw " Don't redraw while executing macros
 set magic " Set magic on, for regex
 set ttyfast " Faster redrawing
 set scrolloff=7 "Set scrolloff for more visible context top and below
-set fileformat=unix "Unix file format by default
 set fileformats=unix,dos,mac "Available formats
 set clipboard=unnamed
 set sessionoptions+=tabpages,globals
@@ -84,7 +82,7 @@ let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
 "Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 2 " Tab number
-let g:airline#extensions#tabline#fnamecollapse = 0
+let g:airline#extensions#tabline#fnamecollapse = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'onedark'
 
@@ -196,6 +194,8 @@ let g:DevIconsEnableFoldersOpenClose = 1
 let g:LanguageClient_serverCommands = {
             \ 'javascript.jsx': ['javascript-typescript-stdio'],
             \ 'javascript': ['javascript-typescript-stdio'],
+            \ 'typescript': ['javascript-typescript-stdio'],
+            \ 'go': ['go-langserver'],
             \ }
 
 "Autopairs

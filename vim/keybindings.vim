@@ -54,7 +54,7 @@ nnoremap <Leader>` :exec "terminal"<CR>
 "Normal mode escape for redraw window and sync highlighting, this is beacuse
 "of <C-L> is used for navigating windows
 "Cant bind to <Esc> beacuse it will cause E481 no range allowed warning
-nnoremap <silent> <BS> :exec 'nohls \| diffupdate \| syntax sync fromstart \| redraw'<CR>
+nnoremap <silent> <BS> :exec "nohls \| diffupdate \| syntax sync fromstart \| redraw"<CR>
 
 "Normal mode jump to match tag
 nnoremap <silent> <Leader>% :exec "MtaJumpToOtherTag"<CR>
@@ -139,7 +139,4 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
-"Toggle cursorline and relativenumber
-nnoremap <silent> <Leader>rn :set relativenumber cursorline<CR>
-nnoremap <silent> <Leader>RN :set norelativenumber nocursorline<CR>
+nnoremap <silent> <F12> :call LanguageClient#textDocument_references()<CR>
