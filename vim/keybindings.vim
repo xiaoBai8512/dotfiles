@@ -105,9 +105,11 @@ nnoremap <LocalLeader>A :Ack!<Space>
 "Normal mode show a prompt for Buffers list
 nnoremap <LocalLeader>B :exec "Buffers"<CR>
 
-"Normal mode quick open new line up or down and go back to current mark
-nnoremap go mmo<Esc>`m
-nnoremap gO mmO<Esc>`m
+"Normal mode quick open new line up or down and go back to current mark, now
+"using unimpaired to add a countable lines above or below cursor line.
+" [<Space> above ]<Space> below
+" nnoremap go mmo<Esc>`m
+" nnoremap gO mmO<Esc>`m
 
 "Select mode indention dont lose selections
 xnoremap < <gv
