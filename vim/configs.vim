@@ -132,7 +132,7 @@ let g:vue_disable_pre_processors = 1
 
 "Prettier
 let g:prettier#autoformat = 0
-let g:prettier#exec_cmd_async = 1
+let g:prettier#exec_cmd_async = 0
 let g:prettier#quickfix_auto_focus = 1
 "max line length that prettier will wrap on
 let g:prettier#config#print_width = 80

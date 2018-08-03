@@ -1,5 +1,5 @@
 "Quit current window
-nnoremap <C-Z> :q<CR>
+nnoremap <silent> <C-Z> :q<CR>
 
 "Disable space to jump a character
 nnoremap <Space> <Nop>
