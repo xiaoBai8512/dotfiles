@@ -1,3 +1,5 @@
 *.swo
 *.swp
 .ropeproject/
+.tern-port
+.tern-project
