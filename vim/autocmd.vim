@@ -2,7 +2,7 @@
 autocmd VimEnter * call s:WelcomepageLoad()
 
 func! s:WelcomepageLoad() abort
-    exec 'NERDTree | wincmd p | Startify'
+    exec 'Startify | NERDTree'
 endf
 "
 "NERDTree

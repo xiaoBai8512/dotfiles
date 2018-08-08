@@ -132,6 +132,7 @@ let g:jsx_ext_required = 0
 let g:vue_disable_pre_processors = 1
 
 "Prettier
+let g:prettier#exec_cmd_path = "/usr/local/bin/prettier"
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 0
 let g:prettier#quickfix_auto_focus = 1
