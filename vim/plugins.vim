@@ -115,7 +115,7 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',
             \ 'do': 'bash install.sh && ' .
-            \ 'yarn global add javascript-typescript-langserver' .
+            \ 'yarn global add javascript-typescript-langserver vue-language-server' .
             \ 'go get -u github.com/sourcegraph/go-langserver',
             \ }
 Plug 'chrisbra/csv.vim'

@@ -17,7 +17,7 @@
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
-	<true/>
+	<false/>
 	<key>CopySelection</key>
 	<true/>
 	<key>Custom Color Presets</key>
@@ -46726,9 +46726,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 342 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>687 964 928 394 0 0 2560 1417 </string>
+	<string>687 885 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1417 0 0 2560 1417 </string>
+	<string>0 23 2560 1394 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 71 650 402 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_806E3D77-D269-49C0-87D7-D3467D6F141D</key>
@@ -47184,7 +47184,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-05T01:43:42Z</date>
+	<date>2018-08-07T12:27:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

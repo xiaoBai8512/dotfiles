@@ -38,13 +38,13 @@ if has("gui_running")
 endif
 
 "GUI specific settings
-set guioptions=i
+set guioptions=ik
 set mouse=a
 set noerrorbells
 set vb t_vb=
 
 "Themes
-colorscheme onedark
+colorscheme gruvbox
 set background=dark "Background color
 set nocursorline
 set norelativenumber "Relative number
@@ -56,6 +56,7 @@ endif
 set number "Line Number
 set t_Co=256 "Terminal color
 set cmdheight=2
+set linespace=2
 if !exists('g:syntax_on') | syntax enable | endif
 
 "Plugins
@@ -195,6 +196,7 @@ let g:LanguageClient_serverCommands = {
             \ 'javascript.jsx': ['javascript-typescript-stdio'],
             \ 'javascript': ['javascript-typescript-stdio'],
             \ 'typescript': ['javascript-typescript-stdio'],
+            \ 'vue': ['vls'],
             \ 'go': ['go-langserver'],
             \ }
 
