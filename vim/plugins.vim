@@ -12,7 +12,6 @@ call plug#begin('~/.vim/vim-plug-plugins')
 Plug 'chemzqm/wxapp.vim'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
-Plug 'carlitux/deoplete-ternjs', {'do': 'yarn global add tern'}
 Plug 'herringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', {'do': 'yarn install'}
@@ -28,13 +27,13 @@ Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier '
 Plug 'mattn/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'heavenshell/vim-jsdoc'
+Plug 'valloric/youcompleteme', {'do' : './install.py'}
 " }}}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'flazz/vim-colorschemes'
 Plug 'haya14busa/incsearch.vim'
@@ -62,15 +61,6 @@ Plug 'mileszs/ack.vim', {'do': 'brew install ack'}
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'raimondi/delimitmate'
 Plug 'shougo/denite.nvim'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'zchee/deoplete-go', {'do': 'make'}
-Plug 'zchee/deoplete-jedi'
 Plug 'shougo/unite.vim'
 Plug 'shougo/vimproc.vim', {'do': 'make'}
 Plug 'sirVer/ultisnips'
@@ -86,7 +76,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 "Yankstack must load before surround or surround after yankstack beacuse
 "keymap conflict with capital s
-Plug 'justinmk/vim-sneak'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-surround'
 Plug 'valloric/MatchTagAlways'
@@ -102,10 +91,8 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'amix/vim-zenroom2'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'rhysd/clever-f.vim'
 Plug 'ujihisa/neco-look'
 Plug 't9md/vim-choosewin'
-Plug 'haya14busa/vim-easyoperator-line'
 Plug 'mhinz/vim-grepper'
 Plug 'osyo-manga/vim-jplus'
 Plug 'tacahiroy/ctrlp-funky'

@@ -70,15 +70,9 @@ let g:pymode_rope_autoimport = 1
 "Vim-Jsx-Pretty
 let g:vim_jsx_pretty_colorful_config = 1
 
-"Deoplete
-let g:deoplete#enable_at_startup = 1
-
 "UltiSnipates
-let g:UltiSnipsExpandTrigger = "<Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
-let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsSnippetsDir = VIMCONFIGDIR . '/UltiSnips'
+let g:UltiSnipsExpandTrigger="<tab>"
 
 "Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -120,6 +114,17 @@ let g:ale_use_global_executables = 1
 
 "Multiple cursor
 let g:multi_cursor_select_all_word_key = '<Leader><C-N>'
+function! Multiple_cursors_before()
+    if exists(':NeoCompleteLock')==2
+        exe 'NeoCompleteLock'
+    endif
+endfunction
+
+function! Multiple_cursors_after()
+    if exists(':NeoCompleteUnlock')==2
+        exe 'NeoCompleteUnlock'
+    endif
+endfunction
 
 "Indent line
 let g:indentLine_enabled = 1
