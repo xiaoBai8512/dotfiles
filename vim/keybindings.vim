@@ -136,12 +136,16 @@ nnoremap <Leader>fu :CtrlPFunky<CR>
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<CR>
 
 "LanguageClient
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-" Or map each action separately
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> <F12> :call LanguageClient#textDocument_references()<CR>
+autocmd BufEnter *.js,*.jsx,*.ts,*.tsx,*.vue,*.json,*.css,*.scss,*.sass,*.html call s:registKeyBindings()
+
+function! s:registKeyBindings() abort
+    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+    " Or map each action separately
+    nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+    nnoremap <silent> <F12> :call LanguageClient#textDocument_references()<CR>
+endfunction
 
 "Ultisnips
 inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>

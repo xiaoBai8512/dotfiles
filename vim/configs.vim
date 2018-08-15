@@ -50,9 +50,9 @@ set nocursorline
 set norelativenumber "Relative number
 set guifont=RobotoMono_Nerd_Font:h14
 set laststatus=2
-if exists('+colorcolumn')
-    set colorcolumn=80
-endif
+" if exists('+colorcolumn')
+"     set colorcolumn=80
+" endif
 set number "Line Number
 set t_Co=256 "Terminal color
 set cmdheight=2
@@ -60,6 +60,9 @@ set linespace=2
 if !exists('g:syntax_on') | syntax enable | endif
 
 "Plugins
+
+"Deoplete
+let g:deoplete#enable_at_startup = 1
 
 "Python-Mode
 let g:pymode_python = 'python3'
@@ -72,7 +75,7 @@ let g:vim_jsx_pretty_colorful_config = 1
 
 "UltiSnipates
 let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
 
 "Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -202,6 +205,10 @@ let g:LanguageClient_serverCommands = {
             \ 'javascript.jsx': ['javascript-typescript-stdio'],
             \ 'javascript': ['javascript-typescript-stdio'],
             \ 'typescript': ['javascript-typescript-stdio'],
+            \ 'css': ['css-languageserver','--stdio'],
+            \ 'scss': ['css-languageserver','--stdio'],
+            \ 'sass': ['css-languageserver','--stdio'],
+            \ 'html': ['html-languageserver','--stdio'],
             \ 'vue': ['vls'],
             \ 'go': ['go-langserver'],
             \ }

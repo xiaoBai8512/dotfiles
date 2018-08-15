@@ -27,7 +27,14 @@ Plug 'w0rp/ale', {'do': 'yarn global add eslint prettier-eslint prettier '
 Plug 'mattn/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'valloric/youcompleteme', {'do' : './install.py'}
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" Plug 'valloric/youcompleteme', {'do' : './install.py'}
 " }}}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'andrewradev/splitjoin.vim'
@@ -102,7 +109,7 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',
             \ 'do': 'bash install.sh && ' .
-            \ 'yarn global add javascript-typescript-langserver vue-language-server' .
+            \ 'yarn global add javascript-typescript-langserver vue-language-server vscode-css-languageserver-bin vscode-html-languageserver-bin && ' .
             \ 'go get -u github.com/sourcegraph/go-langserver',
             \ }
 Plug 'chrisbra/csv.vim'
